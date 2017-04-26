@@ -1,7 +1,7 @@
 ﻿// if !(requiredVersion "1.60") then {
 	// failMission "LOSER";
 // }else{
-	debug=true;
+	debug=false;
 	if (isServer) then {
 		[] Call Compile preprocessFileLineNumbers "m\server\params.sqf";
 		[] execVM "m\server\StartTime.sqf"
