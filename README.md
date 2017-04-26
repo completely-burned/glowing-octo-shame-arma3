@@ -6,4 +6,6 @@
 
 эта миссия может быть воспроизведен на других картах Tanoa и т.д. для этого скопируйте недостающие файлы из glowing-octo-shame.Altis
 
-http://github.com/fearOfSociety/glowing-octo-shame-arma3/wiki
+[последнюю версию можно скачать тут](./releases)
+
+[wiki](./wiki)
