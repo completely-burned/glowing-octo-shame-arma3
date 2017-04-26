@@ -162,7 +162,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=0;
+					value=1;
 				};
 			};
 		};
@@ -181,7 +181,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=1;
 				};
 			};
 		};
@@ -368,7 +368,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.2";
+		briefingName="glowing-octo-shame v0.0.0.3";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;

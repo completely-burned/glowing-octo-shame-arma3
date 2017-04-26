@@ -97,6 +97,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=300;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="ReviveRequiredTrait";
 			expression="false";
 			class Value
@@ -114,7 +133,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
+		class Attribute2
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -178,7 +197,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute2
+		class Attribute3
 		{
 			property="ReviveMode";
 			expression="false";
@@ -197,7 +216,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=3;
+		nAttributes=4;
 	};
 	class Category1
 	{
@@ -228,7 +247,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.2";
+		briefingName="glowing-octo-shame v0.0.0.3";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
