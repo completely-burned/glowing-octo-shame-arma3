@@ -26,9 +26,9 @@ if(isMultiplayer)then{
 				if([[_unit],listMHQ] call m_fnc_CheckIsKindOfArray)then{
 					if ({isPlayer _x} count crew _unit == 0) then {	
 						_marker setMarkerPosLocal (position _unit);
-						_marker setMarkerTypeLocal "vehicle";
+						_marker setMarkerTypeLocal "hd_dot";
 						_marker setMarkerDirLocal getDir _unit;
-						_marker setMarkerSizeLocal [3,3];
+						_marker setMarkerSizeLocal [1,1];
 						_marker setMarkerColorLocal "ColorBlack";
 						private ["_text"];
 						_text = "";
@@ -42,15 +42,15 @@ if(isMultiplayer)then{
 					_veh = vehicle _unit;							
 					if ((_veh == _unit) || (_unit == (effectiveCommander _veh))) then {	
 						_marker setMarkerPosLocal (position _veh);
-						_marker setMarkerTypeLocal "vehicle";
+						_marker setMarkerTypeLocal "hd_dot";
 						_marker setMarkerDirLocal getDir _veh;
-						_marker setMarkerSizeLocal [3,3];
+						_marker setMarkerSizeLocal [1,1];
 						_marker setMarkerColorLocal "ColorBlack";
 						private ["_text"];
 						_text = "";
 						_text = (_text + " " + getText(configFile >> 'CfgVehicles' >> (typeOf _veh) >> 'displayName'));
 						_text = (_text + " " + name _unit);
-						if (lifeState _unit == "UNCONSCIOUS") then {
+						if (lifeState _unit == "INCAPACITATED") then {
 							_text = _text + (" " + Localize "str_reply_injured");
 						};
 						_marker setMarkerTextLocal _text;
