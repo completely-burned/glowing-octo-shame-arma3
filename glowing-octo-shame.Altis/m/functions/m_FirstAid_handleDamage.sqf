@@ -19,16 +19,21 @@ if(_unit == _source)then{
 	};
 };
 
-if(_m_true)then{
-	if(_selection == "" && _damage >= 0.8 && alive _unit)then{
-		_unit setvariable ["BIS_lifeState","INCAPACITATED",true];
-		_unit setvariable ["BIS_IS_inAgony",true,true];
-		_m_true = false;
-		0.8
-	};
-};
+// if(_m_true)then{
+	// if(_selection == "" && _damage >= 0.8 && alive _unit)then{
+		// _unit setvariable ["BIS_lifeState","INCAPACITATED",true];
+		// _unit setvariable ["BIS_IS_inAgony",true,true];
+		// _m_true = false;
+		// 0.8
+	// };
+// };
+
+// if(_m_true)then{
+	// _m_true = false;
+	// _damage min (0.8 - 0.01)
+// };
 
 if(_m_true)then{
 	_m_true = false;
-	_damage min (0.8 - 0.01)
+	_damage
 };
