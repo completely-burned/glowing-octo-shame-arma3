@@ -1,6 +1,6 @@
 # glowing-octo-shame-arma3
 
-миссия для игры ArmA 3
+Это портирование миссии glowing-octo-shame-arma2 игры ArmA 2 для Arma 3
 
 главное меню посмотреть нажав 0-8-
 
