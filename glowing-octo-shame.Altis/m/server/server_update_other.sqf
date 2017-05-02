@@ -62,7 +62,7 @@ forEach (allMissionObjects 'MASH');
 		};
 	};
 }
-forEach (allMissionObjects 'ReammoBox_F'); 
+forEach (allMissionObjects 'ReammoBox_F')+(allMissionObjects 'ReammoBox'); 
 
 {
 	_x setAmmoCargo 1;
