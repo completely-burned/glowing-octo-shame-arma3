@@ -39,7 +39,7 @@ if (true) then {
 				hint format["%1: %2", localize "str_support_done", "Box_NATO_Wps_F"];
 		};
 	};
-	if ((_type isKindOf "ReammoBox_F") or (getText(configFile >> "CfgVehicles" >> _type >> "vehicleclass") in ["Ammo","ACE_Ammunition"])) then {
+	if ((_type isKindOf "ReammoBox_F") or (_type isKindOf "ReammoBox") or (getText(configFile >> "CfgVehicles" >> _type >> "vehicleclass") in ["Ammo","ACE_Ammunition"])) then {
 		Private["_Objects"];
 		_Objects = (nearestObjects [vehicle player, ["Base_WarfareBBarracks"]+_HQ+["WarfareBDepot","WarfareBCamp"], 100]);
 		if ( (count _Objects > 0) or _respawn_pos) then {
