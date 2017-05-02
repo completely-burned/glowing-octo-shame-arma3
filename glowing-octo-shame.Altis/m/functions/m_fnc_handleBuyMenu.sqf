@@ -21,7 +21,7 @@ _nearestObjects = [
 	"Base_WarfareBBarracks","Base_WarfareBLightFactory",
 	"Base_WarfareBHeavyFactory","Base_WarfareBAircraftFactory"] + listMHQ + HQ + Airport + pier;
 	if(!isServer)then{
-		_nearestObjects set [count _nearestObjects,"ReammoBox"];
+		_nearestObjects set [count _nearestObjects,"ReammoBox_F"];
 	};
 
 private["_Objects"];
@@ -46,7 +46,7 @@ while {true} do {
 			_type = (typeOf _Object);
 			
 			if (alive _Object) then {
-				// if (true && _type isKindOf "ReammoBox") then {
+				// if (true && _type isKindOf "ReammoBox_F") then {
 					// [_Object,_type] call _fnc_reamoBox;
 				// };
 
@@ -116,7 +116,7 @@ while {true} do {
 					};
 				};
 
-				if ([[_type],["ReammoBox"]] call m_fnc_CheckIsKindOfArray) then {
+				if ([[_type],["ReammoBox_F"]] call m_fnc_CheckIsKindOfArray) then {
 					if (alive _Object) then {
 						_Object call m_fnc_updateReammoBox;
 					}else{
@@ -228,7 +228,7 @@ while {true} do {
 
 		_0 = _BuyMenu select 0; _1 = _BuyMenu select 1; _2 = _BuyMenu select 2;
 		_0 set [count _0, "#USER:Ammo_0"];
-		_1 set [count _1, gettext(configfile >> "cfgvehicles" >> "ReammoBox" >> "displayName")];
+		_1 set [count _1, gettext(configfile >> "cfgvehicles" >> "ReammoBox_F" >> "displayName")];
 		_2 set [count _2, 1];
 		_BuyMenu = [_0,_1,_2];
 

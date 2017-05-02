@@ -1,7 +1,7 @@
 ﻿{
 	_x allowDamage false;
 	_x setVariable ["_noDelete",true];
-}forEach(allMissionObjects 'MASH')+(allMissionObjects 'ReammoBox')+(allMissionObjects 'WarfareBCamp'); 
+}forEach(allMissionObjects 'MASH')+(allMissionObjects 'ReammoBox_F')+(allMissionObjects 'WarfareBCamp'); 
 
 {
 	_x allowDamage false;
@@ -62,7 +62,7 @@ forEach (allMissionObjects 'MASH');
 		};
 	};
 }
-forEach (allMissionObjects 'ReammoBox'); 
+forEach (allMissionObjects 'ReammoBox_F'); 
 
 {
 	_x setAmmoCargo 1;
