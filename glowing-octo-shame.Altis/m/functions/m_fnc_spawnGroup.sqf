@@ -64,7 +64,7 @@ _groups = [];
 			};
 			
 			if (((count _ranks) > 0)) then {
-				_unit setRank (_ranks select _i);
+				[_unit,_ranks select _i] call bis_fnc_setRank;
 			}else{
 						Private["_cost","_rank"];
 						_cost = getNumber (configFile >> "CfgVehicles" >> _type >> "cost");
@@ -75,7 +75,7 @@ _groups = [];
 						if(_cost>=350000)then{_rank="CAPTAIN"};
 						if(_cost>=500000)then{_rank="MAJOR"};
 						if(_cost>=750000)then{_rank="COLONEL"};
-						_unit setRank _rank;
+						[_unit,_rank] call bis_fnc_setRank;
 			};
 			
 	};
