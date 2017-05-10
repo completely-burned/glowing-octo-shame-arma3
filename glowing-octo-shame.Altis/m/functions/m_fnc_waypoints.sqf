@@ -88,6 +88,10 @@ if(!isNull _grp)then{
 			_landing = true;
 		};
 
+		if({getText(LIB_cfgVeh >> typeOf _x >> "vehicleClass") == "Submarine"} count _vehicles > 0)then{
+			_landing = true;
+		};
+
 		if(_landing)then{
 			private["_true"];
 			_true = true;
@@ -151,7 +155,7 @@ if(!isNull _grp)then{
 					_grp = group _this;
 					waitUntil{sleep 0.5;(isNull _this) or (!alive _this) or (!canMove _this) or ((_this distance (waypointPosition [_grp, currentwaypoint _grp])) <= 100 max waypointCompletionRadius [_grp, currentwaypoint _grp])};
 					{
-						if(group _x != _grp or getNumber(LIB_cfgWea >> currentWeapon _this >> "enableAttack")==0)then{
+						if(group _x != _grp or getNumber(LIB_cfgWea >> currentWeapon _this >> "enableAttack")==0 or getText(LIB_cfgVeh >> typeOf _this >> "vehicleClass") == "Submarine")then{
 							_x leaveVehicle _this;
 						};
 					}forEach crew _this;

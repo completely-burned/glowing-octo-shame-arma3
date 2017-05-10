@@ -45,6 +45,9 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["B_sniper_F","B_spotter_F"],[[0,0,0],[5,-5,0]],["SERGEANT","CORPORAL"]]],0.5],
 			// водолазы
 			[[[["B_diver_TL_F","B_diver_exp_F","B_diver_F","B_diver_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE"]]],0.5],
+			// корабль
+			[[[["B_Soldier_TL_F","B_Soldier_AR_F","B_soldier_GL_F","B_soldier_LAT_F","B_Boat_Transport_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[0,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+			[[[["B_diver_TL_F","B_diver_exp_F","B_diver_F","B_diver_F","B_SDV_01_F","B_SDV_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[0,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 			// колесный
 			[[[["B_MRAP_01_gmg_F","B_soldier_AR_F","B_soldier_LAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0]],["CORPORAL","SERGEANT","CORPORAL"]]],0.5],
 			[[[["B_MRAP_01_F","B_soldier_AT_F","B_soldier_AT_F","B_soldier_AAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[0,-10,0]],["CORPORAL","SERGEANT","CORPORAL","CORPORAL"]]],0.5],
@@ -117,6 +120,9 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["O_sniper_F","O_spotter_F"],[[0,0,0],[5,-5,0]],["CORPORAL","PRIVATE"]]],0.5],
 			// водолазы
 			[[[["O_diver_TL_F","O_diver_exp_F","O_diver_F","O_diver_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE"]]],0.5],
+			// корабль
+			[[[["O_soldier_TL_F","O_soldier_AR_F","O_soldier_GL_F","O_soldier_LAT_F","O_Boat_Transport_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+			[[[["O_diver_TL_F","O_diver_exp_F","O_diver_F","O_diver_F","O_SDV_01_F","O_SDV_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 			// колесный
 			[[[["O_MRAP_02_GMG_F","O_soldier_AR_F","O_soldier_AT_F"],[[0,0,0],[-5,-5,0],[-5,-5,0]],["CORPORAL","SERGEANT","CORPORAL"]]],0.5],
 			[[[["O_MRAP_02_F","O_soldier_AT_F","O_soldier_AT_F","O_soldier_AAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[0,-10,0]],["CORPORAL","SERGEANT","CORPORAL","PRIVATE"]]],0.5],
@@ -175,6 +181,9 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["I_Sniper_F","I_Spotter_F"],[[0,0,0],[5,-5,0]],["SERGEANT","CORPORAL"]]],0.5],
 			// водолазы
 			[[[["I_diver_TL_F","I_diver_exp_F","I_diver_F","I_diver_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE"]]],0.5],
+			// корабль
+			[[[["I_Soldier_TL_F","I_Soldier_AR_F","I_Soldier_GL_F","I_soldier_LAT_F","I_Boat_Transport_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+			[[[["I_diver_TL_F","I_diver_exp_F","I_diver_F","I_diver_F","I_SDV_01_F","I_SDV_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 			// колесный
 			[[[["I_MRAP_03_gmg_F","I_Soldier_AR_F","I_Soldier_LAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0]],["CORPORAL","SERGEANT","CORPORAL","PRIVATE"]]],0.5],
 			[[[["I_MRAP_03_F","I_Soldier_AT_F","I_Soldier_AAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[0,-10,0]],["CORPORAL","SERGEANT","CORPORAL","PRIVATE"]]],0.5],
@@ -236,6 +245,9 @@ if(configName(LIB_cfgVeh >> "B_T_soldier_F") != "")then{
 			[[[["B_CTRG_Soldier_JTAC_tna_F","B_CTRG_Soldier_tna_F"],[[0,0,0],[5,-5,0]],["CORPORAL","PRIVATE"]]],0.5],
 			// водолазы
 			[[[["B_T_diver_TL_F","B_T_diver_exp_F","B_T_diver_F","B_T_diver_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE"]]],0.5],
+			// корабль
+			[[[["B_T_soldier_TL_F","B_T_soldier_AR_F","B_T_soldier_GL_F","B_T_soldier_LAT_F","B_T_Boat_Transport_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+			[[[["B_T_diver_TL_F","B_T_diver_exp_F","B_T_diver_F","B_T_diver_F","B_SDV_01_F","B_SDV_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 			// колесный
 			[[[["B_T_MRAP_01_gmg_F","B_T_soldier_AR_F","B_T_soldier_LAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0]],["CORPORAL","SERGEANT","PRIVATE"]]],0.5],
 			[[[["B_T_MRAP_01_F","B_T_soldier_AT_F","B_T_soldier_AT_F","B_T_soldier_AAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[0,-10,0]],["CORPORAL","SERGEANT","CORPORAL","PRIVATE"]]],0.5],
@@ -290,6 +302,9 @@ if(configName(LIB_cfgVeh >> "B_T_soldier_F") != "")then{
 			[[[["O_T_sniper_F","O_T_spotter_F"],[[0,0,0],[5,-5,0]],["CORPORAL","PRIVATE"]]],0.5],
 			// водолазы
 			[[[["O_T_diver_TL_F","O_T_diver_exp_F","O_T_diver_F","O_T_diver_F"],[],["SERGEANT","CORPORAL","PRIVATE","PRIVATE"]]],0.5],
+			// корабль
+			[[[["O_T_soldier_TL_F","O_T_soldier_AR_F","O_T_soldier_GL_F","O_T_soldier_LAT_F","O_T_Boat_Transport_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+			[[[["O_T_diver_TL_F","O_T_diver_exp_F","O_T_diver_F","O_T_diver_F","O_SDV_01_F","O_SDV_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0]],["SERGEANT","CORPORAL","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 			// колесный
 			[[[["O_T_MRAP_02_gmg_ghex_F","O_T_soldier_AR_F","O_T_soldier_AT_F"],[[0,0,0],[5,-5,0],[-5,-5,0]],["CORPORAL","SERGEANT","PRIVATE"]]],0.5],
 			[[[["O_T_MRAP_02_ghex_F","O_T_soldier_AT_F","O_T_soldier_AT_F","O_T_soldier_AAT_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[0,-10,0]],["CORPORAL","SERGEANT","PRIVATE","PRIVATE"]]],0.5],
