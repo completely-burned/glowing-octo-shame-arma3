@@ -257,21 +257,21 @@ _getOut=[];
 					// } forEach (_x nearEntities ["Man",50]);
 				// };
 
-					if (vehicle _x == _x) then {
-						if (surfaceIsWater getPos _x) then {
-							_timeIsWater = (_x getVariable "timeIsWater");
-							if ( isNil "_timeIsWater" ) then {
-								_timeIsWater = ( time + ( 60 * 3 ) );
-								_x setVariable ["timeIsWater", _timeIsWater];
-							}else{
-								if ( _timeIsWater < time )then {
-									_x setDamage 1;
-								};
-							};
-						}else{
-							_x setVariable ["timeIsWater", nil];
-						};
-					};
+					// if (vehicle _x == _x) then {
+						// if (surfaceIsWater getPos _x) then {
+							// _timeIsWater = (_x getVariable "timeIsWater");
+							// if ( isNil "_timeIsWater" ) then {
+								// _timeIsWater = ( time + ( 60 * 3 ) );
+								// _x setVariable ["timeIsWater", _timeIsWater];
+							// }else{
+								// if ( _timeIsWater < time )then {
+									// _x setDamage 1;
+								// };
+							// };
+						// }else{
+							// _x setVariable ["timeIsWater", nil];
+						// };
+					// };
 				
 			if (_delete) then {
 				_deleteList set [count _deleteList,_x];
