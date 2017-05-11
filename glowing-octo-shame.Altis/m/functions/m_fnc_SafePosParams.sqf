@@ -48,9 +48,16 @@ _preferRoads=false;
 
 if ([_types, ["Ship"]] call m_fnc_CheckIsKindOfArray) then{
 	_minDist = 1500;
+	_maxDist = _minDist*2;
 	_waterMode = 2;
 	_objDist = -1;
 	_blacklist=[];
+}else{
+	if ({getText(LIB_cfgVeh >> _x >> "vehicleClass") == "MenDiver"}count _types > 0) then{
+		_minDist = 1000;
+		_maxDist = _minDist*2;
+		_waterMode = -1;
+	};
 };
 
 [_minDist,_maxDist, _objDist, _waterMode, _maxGradient, _shoreMode, _blacklist, _defaultPos, _preferRoads];
