@@ -58,7 +58,7 @@ _deleteList=[];
 			};
 		};
 	
-		if (({!isNull _x} count crew _veh)>0) then{
+		if (({!isNull _x} count (crew _veh + [assignedDriver _veh, assignedGunner _veh, assignedCommander _veh] + assignedCargo _veh))>0) then{
 			if(isEngineOn _veh && speed _veh == 0 && alive driver _veh)then{
 				_veh engineOn false;
 			};
