@@ -139,6 +139,12 @@ _getOut=[];
 						_allowGetin=true;
 					};
 				};
+
+				if!(_allowGetin)then{
+					if(waypointType [group _x, currentwaypoint group _x] == "SUPPORT")then{
+						_allowGetin=true;
+					};
+				};
 			};
 		};
 		
@@ -272,6 +278,12 @@ _getOut=[];
 							// _x setVariable ["timeIsWater", nil];
 						// };
 					// };
+					
+					if(waypointType [group _x, currentwaypoint group _x] == "SUPPORT")then{
+						if(!alive _assignedVehicle or !canMove _assignedVehicle)then{
+							_delete = true;
+						};
+					};
 				
 			if (_delete) then {
 				_deleteList set [count _deleteList,_x];

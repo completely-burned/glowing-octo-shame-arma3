@@ -1,10 +1,11 @@
 ﻿private ["_grp"];
 _grp = (_this select 0);
 if(!isNull _grp)then{
-	private ["_leader","_units","_vehicles","_landing"];
+	private ["_leader","_units","_vehicles","_landing","_types"];
 	_leader = leader _grp;
 	_units = units _grp;
 	_vehicles = [];
+	_types = [];
 	_landing = false;
 	{	
 		private ["_veh"];
@@ -12,6 +13,7 @@ if(!isNull _grp)then{
 		if(_veh != _x)then{
 			if!(_veh in _vehicles)then{
 				_vehicles set [count _vehicles, _veh];
+				_types set [count _types, typeOf _veh];
 				if({_grp != group _x} count crew _veh > 0)then{
 					_landing = true;
 				};
@@ -74,13 +76,44 @@ if(!isNull _grp)then{
 		_wp = [_grp, currentwaypoint _grp];
 	};
 
+	private["_WaypointType","_WaypointTimeout"];
 	if(_patrol or _air or _Ship)then{
-		_wp setWaypointType "MOVE";
-		_wp setWaypointTimeout [0, 0, 0];
+		_WaypointType = "MOVE";
+		_WaypointTimeout = [0, 0, 0];
 	}else{
-		_wp setWaypointType "SAD";
-		_wp setWaypointTimeout [20, 60, 180];
+		_WaypointType = "SAD";
+		_WaypointTimeout = [20, 60, 180];
 	};
+
+	private["_support"];
+	_support = false;
+	ScopeName "_support";
+	{
+		if(getNumber(LIB_cfgVeh >> _x >> "attendant")> 0 && _x isKindOf "LandVehicle")then{
+			_support = true;
+			BreakTo "_support";
+		};
+		if(getNumber(LIB_cfgVeh >> _x >> "transportfuel")> 0)then{
+			_support = true;
+			BreakTo "_support";
+		};
+		if(getNumber(LIB_cfgVeh >> _x >> "transportammo")> 0)then{
+			_support = true;
+			BreakTo "_support";
+		};
+		if(getNumber(LIB_cfgVeh >> _x >> "transportrepair")> 0)then{
+			_support = true;
+			BreakTo "_support";
+		};
+		
+	}forEach _types;
+	if(_support)then{
+		_WaypointType = "SUPPORT";
+		_WaypointTimeout = [0, 0, 0];
+	};
+
+	_wp setWaypointType _WaypointType;
+	_wp setWaypointTimeout _WaypointTimeout;
 
 	if(_Ship)then{
 
@@ -179,5 +212,20 @@ if(!isNull _grp)then{
 				};
 			};
 		}forEach _vehicles
+	};
+
+	if(_support)then{
+		if(count _vehicles > 0)then{
+			if(isNil {_grp getVariable "_support"})then{
+				_grp setVariable ["_support",true];
+				[_vehicles select 0, _grp] spawn {
+					private["_veh","_grp"];
+					_veh = _this select 0; _grp = _this select 1;
+					waitUntil{sleep 0.5;(isNull _grp) or (isNull _veh) or (!alive _veh) or (!canMove _veh) or (_veh distance (waypointPosition [_grp, 0]) > 100 )};
+					[_grp, currentwaypoint _grp] setWaypointPosition [getPos _veh, 0];
+					_grp setVariable ["_support",nil];
+				};
+			};
+		};
 	};
 };
