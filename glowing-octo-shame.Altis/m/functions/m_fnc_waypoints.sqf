@@ -84,12 +84,14 @@ if(!isNull _grp)then{
 
 	if(_Ship)then{
 
+		if!(_patrol)then{
 		if({getNumber(LIB_cfgWea >> currentWeapon _x >> "enableAttack")==0} count _vehicles > 0)then{
 			_landing = true;
 		};
 
 		if({getText(LIB_cfgVeh >> typeOf _x >> "vehicleClass") == "Submarine"} count _vehicles > 0)then{
 			_landing = true;
+		};
 		};
 
 		if(_landing)then{
