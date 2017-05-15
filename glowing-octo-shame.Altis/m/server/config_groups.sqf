@@ -73,7 +73,7 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			// [[[["B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// [[[["B_MBT_01_mlrs_F","B_MBT_01_mlrs_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// поддержка
-			[[[["I_Truck_02_medical_F"],[],["PRIVATE"],[["I_medic_F"]]]],0.5],
+			[[[["B_Truck_01_medical_F"],[],["PRIVATE"],[["B_medic_F"]]]],0.5],
 			[[[["B_Truck_01_Repair_F"],[],["PRIVATE"],[["B_engineer_F"]]]],0.5],
 			[[[["B_Truck_01_fuel_F"],[],["PRIVATE"]]],0.5],
 			[[[["B_Truck_01_ammo_F"],[],["PRIVATE"]]],0.5]

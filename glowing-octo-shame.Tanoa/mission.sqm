@@ -368,7 +368,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.22";
+		briefingName="glowing-octo-shame v0.0.0.23";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -1621,6 +1621,7 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=66;
 			type="LocationCity_F";
+			atlOffset=9.9468212;
 		};
 		class Item56
 		{
@@ -1685,7 +1686,7 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=71;
 			type="LocationCity_F";
-			atlOffset=2.8920956;
+			atlOffset=3.3108082;
 		};
 		class Item61
 		{
