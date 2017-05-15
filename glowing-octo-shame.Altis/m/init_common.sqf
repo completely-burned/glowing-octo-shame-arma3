@@ -31,7 +31,7 @@ safeDistance = 15;
 /// listCrew + listMHQ ///
 listCrew = [];
 listMHQ=[];
-	listMHQ=listMHQ+[
+	listMHQ=listMHQ+["B_Truck_01_medical_F","O_Truck_03_medical_F","O_Truck_02_medical_F","I_Truck_02_medical_F","B_T_Truck_01_medical_F","O_T_Truck_03_medical_ghex_F"
 	];
 	listCrew=listCrew+[
 		"B_helicrew_F",
