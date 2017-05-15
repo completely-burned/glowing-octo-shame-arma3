@@ -30,6 +30,7 @@ SetGroupIconsVisible [true,false];
 [] spawn compile preprocessFileLineNumbers "m\client\updateClient.sqf";
 [] execVM "m\client\updateLocalGroup.sqf";
 // [] execVM "m\client\handleBuyMenuTimeAvailable.sqf";
+[] execVM "m\client\3Dmarkers.sqf";
 
 
 waitUntil{(!isNull player)};
