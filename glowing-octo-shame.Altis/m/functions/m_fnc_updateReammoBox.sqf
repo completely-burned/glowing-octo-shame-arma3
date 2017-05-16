@@ -24,7 +24,7 @@ _getMagazineCargo set [0, _namesToLower];
 		if ( _num != -1) then {
 			_count = ((_count ) - ((_getMagazineCargo select 1) select _num));
 		};
-		_this addMagazineCargo [_Magazine,_count];
+		_this addItemCargo [_Magazine,_count];
 
 } foreach (_Magazines select 0);
 
@@ -45,7 +45,7 @@ _getMagazineCargo set [0, _namesToLower];
 		if ( _num != -1) then {
 			_count = ((_count ) - ((_getMagazineCargo select 1) select _num));
 		};
-		_this addWeaponCargo [_Magazine,_count];
+		_this addItemCargo [_Magazine,_count];
 } foreach (_Magazines select 1);
 
 _getMagazineCargo = getBackpackCargo _this;
@@ -65,7 +65,7 @@ _getMagazineCargo set [0, _namesToLower];
 		if ( _num != -1) then {
 			_count = ((_count ) - ((_getMagazineCargo select 1) select _num));
 		};
-		_this addBackpackCargo [_Magazine,_count];
+		_this addItemCargo [_Magazine,_count];
 } foreach (_Magazines select 2);
 
 _this setammocargo 1;
