@@ -1621,7 +1621,6 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=66;
 			type="LocationCity_F";
-			atlOffset=9.9468212;
 		};
 		class Item56
 		{
@@ -1686,7 +1685,7 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=71;
 			type="LocationCity_F";
-			atlOffset=3.3108082;
+			atlOffset=2.8920956;
 		};
 		class Item61
 		{
