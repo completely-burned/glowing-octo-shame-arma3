@@ -147,12 +147,16 @@ if (true) then {
 		_Objects = (nearestObjects [vehicle player, ["Base_WarfareBAircraftFactory"]+_HQ+Airport+["WarfareBDepot","WarfareBCamp"], 100]);
 		if ( (count _Objects > 0) or _respawn_pos) then {
 			if(_isUAV)then{
-				_pos = position vehicle player;
-				_pos resize 2;
+				Private["_side","_grp","_wp"];
+				_side = playerSide;
+				_grp = createGroup _side;
+				_pos = ([_pos]+([[_type]] call m_fnc_SafePosParams)+[_side] call m_fnc_findSafePos);
 				Private["_veh"];
-				_veh = createVehicle [_type, _pos, [], 20, "FORM"];
+				_veh = [_pos, random 360, _type, _grp] call m_fnc_spawnVehicle;
+				_veh = _veh select 0;
 				_veh call _fnc_1;
-				[_veh, createGroup playerSide] call m_fnc_spawnCrew;
+				_wp = _grp addWaypoint [getPos player, 100];
+				_wp setWaypointType "MOVE";
 				hint format["%1: %2", localize "str_support_done", _type];
 			}else{
 				Private["_veh"];
@@ -173,28 +177,17 @@ if (true) then {
 		_Objects = (nearestObjects [vehicle player, _HQ+Airport+["WarfareBDepot","WarfareBCamp"], 100]);
 		if ( (count _Objects > 0) or _respawn_pos) then {
 			if(_type isKindOf "UAV")then{
+				Private["_side","_grp","_wp"];
+				_side = playerSide;
+				_grp = createGroup _side;
+				_pos = ([_pos]+([[_type]] call m_fnc_SafePosParams)+[_side] call m_fnc_findSafePos);
 				Private["_veh"];
-				if (count _Objects > 0) then {
-					Private["_Object"];
-					_Object = (_Objects select 0);
-					Private["_dir"];
-					_dir = direction _Object;
-					Private["_pos"];
-					_pos = position (_Objects select 0);
-					_pos = ([_pos, (sizeOf typeOf _Object) / 2 + (sizeOf _type) / 2, (180 + _dir)] call BIS_fnc_relPos);
-					_veh = createVehicle [_type, _pos, [], 20, "FORM"];
-					_veh setDir (180 + _dir);
-				}else{
-					Private["_pos"];
-					_pos = position vehicle player;
-					Private["_dir"];
-					_dir = direction vehicle player;
-					_pos = ([_pos, sizeOf _type, _dir] call BIS_fnc_relPos);
-					_veh = createVehicle [_type, _pos, [], 20, "FORM"];
-					_veh setDir _dir;
-				};
+				_veh = [_pos, random 360, _type, _grp] call m_fnc_spawnVehicle;
+				_veh = _veh select 0;
 				_veh call _fnc_1;
-				[_veh, createGroup playerSide] call m_fnc_spawnCrew;
+				_wp = _grp addWaypoint [getPos player, 100];
+				_wp setWaypointType "MOVE";
+				hint format["%1: %2", localize "str_support_done", _type];
 			}else{
 				Private["_veh"];
 				_veh = (createVehicle [_type, [0,0], [], 20, "FORM"]);
