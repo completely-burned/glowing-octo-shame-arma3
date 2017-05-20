@@ -61,3 +61,5 @@ HQ = ["Land_BagBunker_Large_F","Cargo_HQ_base_F","Cargo_Tower_base_F"];
 UAVterminal = listMHQ + HQ + ["Base_WarfareBUAVterminal","HMMWV_Terminal_EP1"];
 
 draga_objectsTeleport = listMHQ + HQ + ["WarfareBBaseStructure","BASE_WarfareBFieldhHospital"];
+
+[] execVM ("m\draga_update_vehicle_init.sqf");
