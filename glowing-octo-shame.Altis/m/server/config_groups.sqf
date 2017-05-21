@@ -69,9 +69,9 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["B_MBT_01_cannon_F","B_APC_Tracked_01_aa_F","B_MBT_01_cannon_F","B_APC_Tracked_01_aa_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 			[[[["B_MBT_01_cannon_F","B_MBT_01_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// артиллерия
-			// [[[["B_MBT_01_arty_F","B_MBT_01_arty_F","B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
-			// [[[["B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
-			// [[[["B_MBT_01_mlrs_F","B_MBT_01_mlrs_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+			[[[["B_MBT_01_arty_F","B_MBT_01_arty_F","B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+			[[[["B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+			[[[["B_MBT_01_mlrs_F","B_MBT_01_mlrs_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// поддержка
 			[[[["B_Truck_01_medical_F"],[],["PRIVATE"],[["B_medic_F"]]]],0.5],
 			[[[["B_Truck_01_Repair_F"],[],["PRIVATE"],[["B_engineer_F"]]]],0.5],
@@ -147,8 +147,8 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["O_MBT_02_cannon_F","O_APC_Tracked_02_AA_F","O_MBT_02_cannon_F","O_APC_Tracked_02_AA_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 			[[[["O_MBT_02_cannon_F","O_MBT_02_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// артиллерия
-			// [[[["O_MBT_02_arty_F","O_MBT_02_arty_F","O_MBT_02_arty_F","O_MBT_02_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
-			// [[[["O_MBT_02_arty_F","O_MBT_02_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+			[[[["O_MBT_02_arty_F","O_MBT_02_arty_F","O_MBT_02_arty_F","O_MBT_02_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+			[[[["O_MBT_02_arty_F","O_MBT_02_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// поддержка
 			[[[["O_Truck_03_medical_F"],[],["PRIVATE"],[["O_medic_F"]]]],0.5],
 			[[[["O_Truck_03_repair_F"],[],["PRIVATE"],[["O_engineer_F"]]]],0.5],
@@ -292,9 +292,9 @@ if(configName(LIB_cfgVeh >> "B_T_soldier_F") != "")then{
 			[[[["B_T_MBT_01_cannon_F","B_T_MBT_01_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// авиация
 			// артиллерия
-			// [[[["B_T_MBT_01_arty_F","B_T_MBT_01_arty_F","B_T_MBT_01_arty_F","B_T_MBT_01_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
-			// [[[["B_T_MBT_01_arty_F","B_T_MBT_01_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
-			// [[[["B_T_MBT_01_mlrs_F","B_T_MBT_01_mlrs_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+			[[[["B_T_MBT_01_arty_F","B_T_MBT_01_arty_F","B_T_MBT_01_arty_F","B_T_MBT_01_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+			[[[["B_T_MBT_01_arty_F","B_T_MBT_01_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+			[[[["B_T_MBT_01_mlrs_F","B_T_MBT_01_mlrs_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// поддержка
 			[[[["B_T_Truck_01_medical_F"],[],["PRIVATE"],[["B_T_Medic_F"]]]],0.5],
 			[[[["B_T_Truck_01_Repair_F"],[],["PRIVATE"],[["B_T_Engineer_F"]]]],0.5],
@@ -352,8 +352,8 @@ if(configName(LIB_cfgVeh >> "B_T_soldier_F") != "")then{
 			[[[["O_T_MBT_02_cannon_ghex_F","O_T_APC_Tracked_02_AA_ghex_F","O_T_MBT_02_cannon_ghex_F","O_T_APC_Tracked_02_AA_ghex_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 			[[[["O_T_MBT_02_cannon_ghex_F","O_T_MBT_02_cannon_ghex_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// артиллерия
-			// [[[["O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
-			// [[[["O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+			[[[["O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+			[[[["O_T_MBT_02_arty_ghex_F","O_T_MBT_02_arty_ghex_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// поддержка
 			[[[["O_T_Truck_03_medical_ghex_F"],[],["PRIVATE"],[["O_T_Medic_F"]]]],0.5],
 			[[[["O_T_Truck_03_repair_ghex_F"],[],["PRIVATE"],[["O_T_Engineer_F"]]]],0.5],

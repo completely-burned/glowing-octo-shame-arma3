@@ -60,4 +60,9 @@ if ([_types, ["Ship"]] call m_fnc_CheckIsKindOfArray) then{
 	};
 };
 
+if ({getNumber(LIB_cfgVeh >> _x >> "artilleryScanner") == 1}count _types > 0) then{
+	_minDist = 2000;
+	_maxDist = _minDist*3;
+};
+
 [_minDist,_maxDist, _objDist, _waterMode, _maxGradient, _shoreMode, _blacklist, _defaultPos, _preferRoads];
