@@ -7,7 +7,6 @@ if(toLower worldname in ["altis"])then{_deserted=true};
 if(toLower worldname in ["tanoa"])then{_woodland=true};
 
 // A3
-if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 
 	// B_
 	if(!_woodland && _deserted)then{
@@ -235,9 +234,7 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["I_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5]
 		];
 	};
-};
 
-if(configName(LIB_cfgVeh >> "B_T_soldier_F") != "")then{
 	if(_woodland && !_deserted)then{
 		// B_T_
 		_west=_west+[
@@ -373,7 +370,6 @@ if(configName(LIB_cfgVeh >> "B_T_soldier_F") != "")then{
 			[[[["I_C_Soldier_Bandit_4_F","I_C_Soldier_Bandit_3_F","I_C_Soldier_Bandit_7_F","I_C_Soldier_Bandit_5_F","I_C_Soldier_Bandit_6_F","I_C_Soldier_Bandit_2_F","I_C_Soldier_Bandit_8_F","I_C_Soldier_Bandit_1_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0]],["SERGEANT","PRIVATE","CORPORAL","CORPORAL","SERGEANT","PRIVATE","PRIVATE","PRIVATE"]]],0.5]
 		];
 	};
-};
 
 // _west=[
 // ];
