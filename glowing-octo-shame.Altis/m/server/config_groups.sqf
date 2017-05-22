@@ -214,7 +214,7 @@ if(configName(LIB_cfgVeh >> "B_Soldier_F") != "")then{
 			[[[["I_soldier_SL_F","I_soldier_AA_F","I_soldier_AA_F","I_soldier_AA_F","I_soldier_AAT_F","I_soldier_AAA_F","I_soldier_AAA_F","I_APC_tracked_03_cannon_F"],[[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0],[0,0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 			// танки
 			[[[["I_MBT_03_cannon_F","I_MBT_03_cannon_F","I_MBT_03_cannon_F","I_MBT_03_cannon_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
-			[[[["I_MBT_03_cannon_F","I_MBT_03_cannon_F","I_MBT_03_cannon_F","I_APC_tracked_03_cannon_F","I_soldier_SL_F","I_soldier_AA_F","I_soldier_AA_F","I_soldier_AA_F","I_soldier_AAA_F","I_soldier_AAA_F","I_soldier_AAA_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[0,-15,0],[0,-20,0],[5,-25,0],[-5,-25,0],[10,-30,0],[-10,-30,0],[15,-35,0],[-15,-35,0]],["LIEUTENANT","CORPORAL","CORPORAL","SERGEANT","LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+			[[[["I_MBT_03_cannon_F","I_MBT_03_cannon_F","I_APC_tracked_03_cannon_F","I_APC_tracked_03_cannon_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[0,-15,0]],["LIEUTENANT","SERGEANT","CORPORAL","CORPORAL"]]],0.5],
 			[[[["I_MBT_03_cannon_F","I_MBT_03_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 			// беспилотники
 			[[[["I_UAV_01_F"],[],["PRIVATE"]]],0.5],
