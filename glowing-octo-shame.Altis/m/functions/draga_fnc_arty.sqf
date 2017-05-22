@@ -29,6 +29,8 @@ if(leader _grp distance (waypointPosition [_grp, 0]) > 50)then{
 			};
 
 		}forEach _targets2;
+		private ["_pos"];
+		_pos = _targets call BIS_fnc_selectRandom;
 		{
 			private ["_veh"];
 			_veh = _x;
@@ -36,7 +38,9 @@ if(leader _grp distance (waypointPosition [_grp, 0]) > 50)then{
 				if({(_x select 1) > 0}count (magazinesAmmo _veh) > 0)then{
 					private ["_mag"];
 					_mag = currentMagazine _veh;
-					_veh commandArtilleryFire [_targets call BIS_fnc_selectRandom, _mag, 3];
+					if(_pos inRangeOfArtillery [[_veh], _mag])then{
+						_veh commandArtilleryFire [_pos, _mag, 3];
+					};
 				};
 			};
 		}forEach _vehicles;

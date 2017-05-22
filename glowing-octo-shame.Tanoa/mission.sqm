@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9347,57.390667,7341};
-		dir[]={-0.61936563,-0.65604365,0.43127808};
-		up[]={-0.53838241,0.75471753,0.37488759};
-		aside[]={0.57143575,5.0597009e-008,0.8206504};
+		pos[]={12316.268,25.995272,5290.7437};
+		dir[]={-0.69543827,-0.20433952,0.68892026};
+		up[]={-0.14516854,0.97890013,0.14380796};
+		aside[]={0.70376974,-7.4505806e-009,0.7104283};
 	};
 };
 binarizationWanted=0;
@@ -340,7 +340,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.38";
+		briefingName="glowing-octo-shame v0.0.0.39";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -1593,7 +1593,6 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=66;
 			type="LocationCity_F";
-			atlOffset=9.9468212;
 		};
 		class Item56
 		{
@@ -1658,7 +1657,7 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=71;
 			type="LocationCity_F";
-			atlOffset=3.3108082;
+			atlOffset=2.8920956;
 		};
 		class Item61
 		{
