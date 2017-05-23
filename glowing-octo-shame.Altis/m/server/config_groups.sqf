@@ -230,7 +230,7 @@ if(true)then{
 		[[[["I_Truck_02_box_F"],[],["PRIVATE"],[["I_engineer_F"]]]],0.5],
 		[[[["I_Truck_02_fuel_F"],[],["PRIVATE"]]],0.5],
 		[[[["I_Truck_02_ammo_F"],[],["PRIVATE"]]],0.5],
-		[[[["I_G_Offroad_01_repair_F"],[],["I_G_engineer_F"]]],0.5],
+		[[[["I_G_Offroad_01_repair_F"],[],["PRIVATE"],[["I_engineer_F"]]]],0.5],
 		[[[["I_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5]
 	];
 };
