@@ -1,6 +1,5 @@
-private["_grp","_side","_units","_vehicles"];
+private["_grp","_units","_vehicles"];
 _grp = _this;
-_side = side _grp;
 _units = units _grp;
 _vehicles = [];
 {	
@@ -14,35 +13,41 @@ _vehicles = [];
 }forEach _units;
 if(leader _grp distance (waypointPosition [_grp, 0]) > 50)then{
 	if({getNumber(LIB_cfgVeh >> typeOf _x >> "artilleryScanner") == 1}count _vehicles > 0)then{
-		private["_targets","_targets2"];
+		private["_targets"];
 		_targets = [];
-		_targets2 = [];
 		{
-			_targets2 = _targets2 + (_x nearTargets 1000);
-		}forEach allUnits;
-		{
-			private ["_side2","_pos"];
-			_side2 = _x select 2;
-			if((_side2 getFriend _side) < 0.6 )then{
-				_pos = _x select 0;
-				_targets set [count _targets, _pos];
-			};
-
-		}forEach _targets2;
-		private ["_pos"];
-		_pos = _targets call BIS_fnc_selectRandom;
-		{
-			private ["_veh"];
-			_veh = _x;
-			if(currentCommand _veh != "FIRE AT POSITION")then{
-				if({(_x select 1) > 0}count (magazinesAmmo _veh) > 0)then{
-					private ["_mag"];
-					_mag = currentMagazine _veh;
-					if(_pos inRangeOfArtillery [[_veh], _mag])then{
-						_veh commandArtilleryFire [_pos, _mag, 3];
+			private["_unit"];
+			_unit = _x;
+			{
+				private ["_side"];
+				_side = _x select 2;
+				if((_side getFriend side _unit) < 0.6 )then{
+					private ["_type"];
+					_type = _x select 1;
+					if(_type isKindOf "Land")then{
+						private ["_pos"];
+						_pos = _x select 0;
+						_targets set [count _targets, _pos];
 					};
 				};
-			};
-		}forEach _vehicles;
+			}forEach (_unit nearTargets 1000);
+		}forEach allUnits;
+		private ["_pos"];
+		if(count _targets > 0)then{
+			_pos = _targets call BIS_fnc_selectRandom;
+			{
+				private ["_veh"];
+				_veh = _x;
+				if(currentCommand _veh != "FIRE AT POSITION")then{
+					if({(_x select 1) > 0}count (magazinesAmmo _veh) > 0)then{
+						private ["_mag"];
+						_mag = currentMagazine _veh;
+						if(_pos inRangeOfArtillery [[_veh], _mag])then{
+							_veh commandArtilleryFire [_pos, _mag, 3];
+						};
+					};
+				};
+			}forEach _vehicles;
+		};
 	};
 };
