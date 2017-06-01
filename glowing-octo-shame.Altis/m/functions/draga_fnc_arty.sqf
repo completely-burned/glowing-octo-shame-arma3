@@ -22,12 +22,14 @@ if(leader _grp distance (waypointPosition [_grp, 0]) > 50)then{
 				private ["_side"];
 				_side = _x select 2;
 				if((_side getFriend side _unit) < 0.6 )then{
+					if(_unit knowsAbout (_x select 4) >= 1.5)then{
 					private ["_type"];
 					_type = _x select 1;
 					if(_type isKindOf "Land")then{
 						private ["_pos"];
 						_pos = _x select 0;
 						_targets set [count _targets, _pos];
+					};
 					};
 				};
 			}forEach (_unit nearTargets 1000);
