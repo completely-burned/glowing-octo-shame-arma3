@@ -340,7 +340,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.48";
+		briefingName="glowing-octo-shame v0.0.0.49";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
