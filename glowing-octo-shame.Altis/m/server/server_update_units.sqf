@@ -1,5 +1,5 @@
 ﻿
-private ["_allowGetin","_deleteList","_getOut"];
+private ["_allowGetin","_deleteList","_getOut","_getIn"];
 while{true}do{
 _deleteList=[];
 _getOut=[];
@@ -303,9 +303,33 @@ _getOut=[];
 } forEach allUnits-playableUnits-switchableUnits;
 
 _getOut allowGetin false; 		
-// {unassignVehicle _x} forEach _getOut; // глючно, но это надо, а может нет
+_getIn = allUnits - _getOut;
+_getIn allowGetin true;
 
-allUnits-_getOut allowGetin true;
+{
+	private["_true","_veh","_driver","_unit"];
+	_true = false;
+	_unit = _x;
+	_veh = vehicle _unit;
+	_driver = driver _veh;
+	
+	if(_unit != _veh && _driver == _unit)then{
+		if({_x in _getOut} count crew _veh > 0)then{
+			_true = true;
+			if(isNil {_driver getVariable "disableMOVE"})then{
+				_driver setVariable ["disableMOVE",true];
+				_driver disableAI "move";
+			};
+		};
+	};
+
+	if!(_true)then{
+		if(!isNil {_driver getVariable "disableMOVE"})then{
+			_driver setVariable ["disableMOVE",nil];
+			_driver enableAI "move";
+		};
+	};
+}forEach allUnits-playableUnits-switchableUnits;
 
 _deleteList call fnc_cleanup;
 	sleep 1;
