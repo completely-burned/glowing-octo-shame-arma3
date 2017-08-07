@@ -311,7 +311,7 @@ _getIn allowGetin true;
 	_true = false;
 	_unit = _x;
 	_veh = vehicle _unit;
-	_driver = driver _veh;
+	_driver = effectiveCommander _veh;
 	
 	if(_unit != _veh && _driver == _unit)then{
 		if({_x in _getOut} count crew _veh > 0)then{
