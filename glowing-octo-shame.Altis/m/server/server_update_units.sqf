@@ -306,31 +306,6 @@ _getOut allowGetin false;
 _getIn = allUnits - _getOut;
 _getIn allowGetin true;
 
-{
-	private["_true","_veh","_driver","_unit"];
-	_true = false;
-	_unit = _x;
-	_veh = vehicle _unit;
-	_driver = effectiveCommander _veh;
-	
-	if(_unit != _veh && _driver == _unit)then{
-		if({_x in _getOut} count crew _veh > 0)then{
-			_true = true;
-			if(isNil {_driver getVariable "disableMOVE"})then{
-				_driver setVariable ["disableMOVE",true];
-				_driver disableAI "move";
-			};
-		};
-	};
-
-	if!(_true)then{
-		if(!isNil {_driver getVariable "disableMOVE"})then{
-			_driver setVariable ["disableMOVE",nil];
-			_driver enableAI "move";
-		};
-	};
-}forEach allUnits-playableUnits-switchableUnits;
-
 _deleteList call fnc_cleanup;
 	sleep 1;
 };
