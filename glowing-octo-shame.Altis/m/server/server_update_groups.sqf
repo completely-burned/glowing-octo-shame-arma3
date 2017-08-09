@@ -29,6 +29,13 @@
 						};
 					};
 					if!(_true)then{
+						if(currentCommand _leader == "FIRE AT POSITION")then{
+							_cleanup = [getPos vehicle _leader,time+20,time+120];
+							_grp setVariable ["_cleanup",_cleanup];
+							_true = true;
+						};
+					};
+					if!(_true)then{
 						if((vehicle _leader distance civilianBasePos) <= (sizeLocation / 2 + sizeLocation))then{
 							_cleanup = [getPos vehicle _leader,time+20,time+120];
 							_grp setVariable ["_cleanup",_cleanup];
