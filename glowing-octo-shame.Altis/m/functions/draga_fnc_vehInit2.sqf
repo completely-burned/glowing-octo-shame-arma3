@@ -58,5 +58,6 @@ if (isNil "_draga_init") then {
 	};
 	_this setVehicleLock "UNLOCKED";
 	_this allowCrewInImmobile true;
+	_this setUnloadInCombat [false, false];
 	_this setVariable ["_draga_init",true]; 
 };
