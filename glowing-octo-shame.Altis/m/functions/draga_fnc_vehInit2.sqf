@@ -33,14 +33,14 @@ if (isNil "_draga_init") then {
 			};
 		}];
 		_this addEventHandler ["GetOut", {
+			private["_veh"];
+			_veh = _this select 0;
 			private["_unit"];
 			_unit = _this select 2;
 			if(isPlayer _unit)then{
 				unassignVehicle _unit;
 			};
 			if (isServer) then {
-				private["_veh"];
-				_veh = _this select 0;
 				if (({!isNull _x} count crew _veh)>0) then{
 					private["_time"];
 					_time = (_veh getVariable "time");
@@ -54,6 +54,7 @@ if (isNil "_draga_init") then {
 					};
 				};
 			};
+			if(_unit == leader _veh)then{_veh commandFollow _unit};
 		}];
 	};
 	_this setVehicleLock "UNLOCKED";

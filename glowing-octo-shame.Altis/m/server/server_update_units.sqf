@@ -299,11 +299,35 @@ _getOut=[];
 	if!(_allowGetin)then{
 		_getOut set [count _getOut,_x];
 	};
-	sleep 0.01;
 } forEach allUnits-playableUnits-switchableUnits;
 
-_getOut allowGetin false; 		
 _getIn = allUnits - _getOut;
+
+	{
+		private["_veh","_unit","_move"];
+		_unit = _x;
+		_veh = vehicle _unit;
+		_move = true;
+		if(_veh != _unit)then{
+			private["_driver"];
+			_driver = driver _veh;
+			if(_driver == _unit)then{
+				if(_move)then{
+					if({_x in _getOut}count crew _veh > 0)then {
+						_move = false;
+					};
+				};
+				if(_move)then{
+					if({assignedVehicle _x == _veh && !(_x in _veh)}count _getIn > 0)then {
+						_move = false;
+					};
+				};
+			};
+		};
+		if(_move)then{_unit enableAI "MOVE"}else{_unit disableAI "MOVE"};
+	}forEach allUnits-playableUnits-switchableUnits;
+
+_getOut allowGetin false; 		
 _getIn allowGetin true;
 
 _deleteList call fnc_cleanup;
