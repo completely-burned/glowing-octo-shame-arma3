@@ -166,6 +166,8 @@ if(count _cargo2 > 0)then{
 	} foreach (_cargo2);
 };
 
+{_x setVariable ["grp_created",true]}forEach _groups;
+
 _groups;
 }else{
 	grpNull;
