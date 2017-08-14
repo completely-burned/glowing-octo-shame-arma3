@@ -218,8 +218,8 @@ if(true)then{
 		[[[["I_Soldier_TL_F","I_Soldier_AR_F","I_Soldier_GL_F","I_soldier_LAT_F","I_Boat_Transport_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 		[[[["I_diver_TL_F","I_diver_exp_F","I_diver_F","I_diver_F","I_SDV_01_F","I_SDV_01_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 		// колесный
-		[[[["I_Soldier_AR_F","I_Soldier_LAT_F","I_MRAP_03_gmg_F"],[[5,-5,0],[-5,-5,0],[0,0,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
-		[[[["I_Soldier_AR_F","I_Soldier_LAT_F","I_MRAP_03_hmg_F"],[[5,-5,0],[-5,-5,0],[0,0,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+		[[[["I_Soldier_AR_F","I_MRAP_03_gmg_F"],[[5,-5,0],[0,0,0]],["SERGEANT","PRIVATE"]]],0.5],
+		[[[["I_Soldier_LAT_F","I_MRAP_03_hmg_F"],[[5,-5,0],[0,0,0]],["SERGEANT","PRIVATE"]]],0.5],
 		[[[["I_Soldier_AT_F","I_Soldier_AAT_F","I_MRAP_03_F"],[[5,-5,0],[-5,-5,0],[0,-10,0],[0,0,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 		[[[["I_Soldier_AA_F","I_Soldier_AAA_F","I_MRAP_03_F"],[[5,-5,0],[-5,-5,0],[0,-10,0],[0,0,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 		[[[["I_support_MG_F","I_support_AMG_F","I_MRAP_03_F"],[[5,-5,0],[-5,-5,0],[0,-10,0],[0,0,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
