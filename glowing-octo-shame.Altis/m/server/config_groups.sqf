@@ -67,10 +67,14 @@ if(!_woodland && _deserted)then{
 		// гусеничный
 		[[[["B_soldier_SL_F","B_soldier_AR_F","B_soldier_AT_F","B_soldier_AT_F","B_soldier_AT_F","B_soldier_AAT_F","B_soldier_AAT_F","B_soldier_AAT_F","B_APC_Tracked_01_rcws_F"],[[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0],[-20,-20,0],[0,0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 		[[[["B_soldier_SL_F","B_soldier_AR_F","B_soldier_AA_F","B_soldier_AA_F","B_soldier_AA_F","B_soldier_AAA_F","B_soldier_AAA_F","B_soldier_AAA_F","B_APC_Tracked_01_aa_F"],[[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0],[-20,-20,0],[0,0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+		[[[["B_APC_Tracked_01_CRV_F"],[[0,0,0]],["SERGEANT"]]],0.5],
 		// танки
 		[[[["B_MBT_01_cannon_F","B_MBT_01_cannon_F","B_MBT_01_cannon_F","B_MBT_01_cannon_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 		[[[["B_MBT_01_cannon_F","B_APC_Tracked_01_aa_F","B_MBT_01_cannon_F","B_APC_Tracked_01_aa_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 		[[[["B_MBT_01_cannon_F","B_MBT_01_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+		[[[["B_MBT_01_TUSK_F","B_MBT_01_TUSK_F","B_MBT_01_TUSK_F","B_MBT_01_TUSK_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+		[[[["B_MBT_01_TUSK_F","B_APC_Tracked_01_aa_F","B_MBT_01_TUSK_F","B_APC_Tracked_01_aa_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+		[[[["B_MBT_01_TUSK_F","B_MBT_01_TUSK_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 		// артиллерия
 		[[[["B_MBT_01_arty_F","B_MBT_01_arty_F","B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 		[[[["B_MBT_01_arty_F","B_MBT_01_arty_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
@@ -306,10 +310,14 @@ if(_woodland && !_deserted)then{
 		// гусеничный
 		[[[["B_T_soldier_SL_F","B_T_soldier_AR_F","B_T_soldier_AT_F","B_T_soldier_AT_F","B_T_soldier_AT_F","B_T_soldier_AAT_F","B_T_soldier_AAT_F","B_T_soldier_AAT_F","B_T_APC_Tracked_01_rcws_F"],[[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0],[-20,-20,0],[0,0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 		[[[["B_T_soldier_SL_F","B_T_soldier_AR_F","B_T_soldier_AA_F","B_T_soldier_AA_F","B_T_soldier_AA_F","B_T_soldier_AAA_F","B_T_soldier_AAA_F","B_T_soldier_AAA_F","B_T_APC_Tracked_01_aa_F"],[[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0],[-20,-20,0],[0,0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+		[[[["B_T_APC_Tracked_01_CRV_F"],[[0,0,0]],["SERGEANT"]]],0.5],
 		// танки
 		[[[["B_T_MBT_01_cannon_F","B_T_MBT_01_cannon_F","B_T_MBT_01_cannon_F","B_T_MBT_01_cannon_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 		[[[["B_T_MBT_01_cannon_F","B_T_APC_Tracked_01_aa_F","B_T_MBT_01_cannon_F","B_T_APC_Tracked_01_aa_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
 		[[[["B_T_MBT_01_cannon_F","B_T_MBT_01_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
+		[[[["B_T_MBT_01_TUSK_F","B_T_MBT_01_TUSK_F","B_T_MBT_01_TUSK_F","B_T_MBT_01_TUSK_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+		[[[["B_T_MBT_01_TUSK_F","B_T_APC_Tracked_01_aa_F","B_T_MBT_01_TUSK_F","B_T_APC_Tracked_01_aa_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
+		[[[["B_T_MBT_01_TUSK_F","B_T_MBT_01_TUSK_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","SERGEANT"]]],0.5],
 		// авиация
 		// артиллерия
 		[[[["B_T_MBT_01_arty_F","B_T_MBT_01_arty_F","B_T_MBT_01_arty_F","B_T_MBT_01_arty_F"],[[0,0,0],[10,-10,0],[-10,-10,0],[20,-20,0]],["LIEUTENANT","SERGEANT","SERGEANT","CORPORAL"]]],0.5],
