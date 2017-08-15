@@ -1,5 +1,11 @@
 ﻿private ["_grp"];
 _grp = (_this select 0);
+private["_h"];
+_h = _grp getVariable "wp";
+if(!isNil "_h")then{terminate _h};
+_h = [_grp] spawn {
+private ["_grp"];
+_grp = (_this select 0);
 if(!isNull _grp)then{
 	private ["_leader","_units","_vehicles","_landing","_types"];
 	_leader = leader _grp;
@@ -237,3 +243,5 @@ if(!isNull _grp)then{
 		};
 	};
 };
+};
+_grp setVariable ["wp",_h];
