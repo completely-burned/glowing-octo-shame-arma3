@@ -8,7 +8,7 @@ _path = "m\server\";
 [] execVM (_path + "server_update_vehicles.sqf");
 [] execVM (_path + "server_update_other.sqf");
 [] execVM (_path + "server_update_location.sqf");
-// [] execVM (_path + "server_update_silvieManager.sqf");
+[] execVM (_path + "server_update_silvieManager.sqf");
 [] execVM (_path + "server_update_groups.sqf");
 
 private ["_time2","_delay","_time2_select"];

@@ -57,15 +57,13 @@ while{true}do{
 								_difmax = (_bboxX max _bboxY);
 								_dif = _difmin/2 + sqrt(_difmin)*0.3;
 
-								if (_difmax < 15) then {
+								if (true) then {
 									_pos = position _road;
 									_pos = [
 										(_pos select 0)+(sin (_dir + 90) * _dif),
 										(_pos select 1)+(cos (_dir + 90) * _dif),
 										0
 									];
-								};
-							};
 							private ["_veh1"];
 							_veh1 = createVehicle [ (silvieManagerVehicles call BIS_fnc_selectRandom), _pos, [], 0, "NONE"];
 							_veh1 setDir _dir;
@@ -73,6 +71,8 @@ while{true}do{
 							_veh1 setVectorUp [0,0,1];
 							// _veh1 addEventHandler ["GetIn",{_this call m_fnc_EH_GetIn}];
 							_veh1 call m_fnc_vehInit;
+								};
+							};
 							sleep 0.01;
 						};
 					};
