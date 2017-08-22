@@ -276,5 +276,6 @@ if(!isNil "_leader")then{
 		_wp setWaypointType _WaypointType;
 		_wp setWaypointSpeed _SpeedMode;
 		_wp setWaypointCompletionRadius _WaypointCompletionRadius;
+		_wp setWaypointStatements ["true", "if(!isNil {this})then{[this] call m_fnc_waypoints}"];
 	};
 };
