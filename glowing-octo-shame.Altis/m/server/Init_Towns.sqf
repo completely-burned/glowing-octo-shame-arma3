@@ -69,6 +69,9 @@ locationNext={
 				[_grp] spawn m_fnc_waypoints;
 				{
 					_x setVariable ["time", time];
+					if!(side _x in m_friendlySide)then{
+						_x allowFleeing 1;
+					};
 				}forEach units _grp;
 			};
 		}forEach allGroups;
