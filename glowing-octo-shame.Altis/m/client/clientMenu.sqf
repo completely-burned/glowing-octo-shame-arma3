@@ -141,7 +141,7 @@ _list = [[],[],[]];
 							[_list,[2,_find_faction,_find_vehicleclass,_count],_type] call m_fnc_setNestedElement;
 						};
 					};
-}forEach availableVehicles+["draga_megaAmmoBox"];
+}forEach availableVehicles;
 [_list,"Ammo"] call _fnc_create_buy_menu;
 
 // _dataListAmmoBox = _dataListAmmoBox + [["all","[] execvm 'm\functions\m_fnc_MegaAmmoBox.sqf'"]];
