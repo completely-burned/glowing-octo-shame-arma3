@@ -58,7 +58,6 @@ forEach (allMissionObjects 'MASH');
 			if ( isNil {_x getVariable "_noDelete"} ) then {
 				_deleteList set [count _deleteList,_x];
 			};
-			_x call m_fnc_updateReammoBox;
 		};
 	};
 }
