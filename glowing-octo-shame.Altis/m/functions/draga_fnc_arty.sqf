@@ -37,19 +37,24 @@ if(leader _grp distance (waypointPosition [_grp, 0]) > 50)then{
 		private ["_pos"];
 		if(count _targets > 0)then{
 			_pos = _targets call BIS_fnc_selectRandom;
-			{
-				private ["_veh"];
-				_veh = _x;
-				if(currentCommand _veh != "FIRE AT POSITION")then{
-					if({(_x select 1) > 0}count (magazinesAmmo _veh) > 0)then{
-						private ["_mag"];
-						_mag = currentMagazine _veh;
-						if(_pos inRangeOfArtillery [[_veh], _mag])then{
-							_veh commandArtilleryFire [_pos, _mag, 3];
+			if(leader _grp countFriendly (_pos nearEntities 150) == 0)then{
+				{
+					private ["_veh"];
+					_veh = _x;
+					if(currentCommand _veh != "FIRE AT POSITION")then{
+						private ["_mag","_true"];
+						_mag = "";
+						_true = false;
+						if("32Rnd_155mm_Mo_shells" in getArtilleryAmmo [_veh])then{_mag = "32Rnd_155mm_Mo_shells";_true = true;};
+						if("12Rnd_230mm_rockets" in getArtilleryAmmo [_veh])then{_mag = "12Rnd_230mm_rockets";_true = true;};
+						if(_true)then{
+							if(_pos inRangeOfArtillery [[_veh], _mag])then{
+								_veh commandArtilleryFire [_pos, _mag, 3];
+							};
 						};
 					};
-				};
-			}forEach _vehicles;
+				}forEach _vehicles;
+			};
 		};
 	};
 };
