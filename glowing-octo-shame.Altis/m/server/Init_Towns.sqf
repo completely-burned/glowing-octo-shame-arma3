@@ -46,7 +46,7 @@ locationNext={
 	if(!isNil {CivilianLocation})then{
 		CivilianLocation setVariable ["time",time];
 	};
-	
+
 	private["_sizeLocation"];
 	_sizeLocation = + 500;
 	private["_NextLocations"];
@@ -66,7 +66,7 @@ locationNext={
 			private["_grp"];
 			_grp = _x;
 			if({isPlayer _x or _x in playableUnits} count units _grp == 0)then{
-				[_grp] spawn m_fnc_waypoints;
+				[leader _grp] spawn m_fnc_waypoints;
 				{
 					_x setVariable ["time", time];
 					if!(side _x in m_friendlySide)then{
@@ -104,7 +104,7 @@ locationNext={
 						_rarity = (_rarity * (_x select 1));
 						[_grp, [1, _i],  _rarity] call BIS_fnc_setNestedElement;
 					};
-				
+
 				}forEach (_this select 1);
 			};
 			_grp
