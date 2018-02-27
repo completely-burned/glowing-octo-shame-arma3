@@ -180,7 +180,7 @@ _getOut=[];
 						if (isNil {group _x getVariable "patrol"}) then {
 							if (_x distance civilianBasePos > 2500 max sizeLocation) then {
 								_delete = true;
-								_x setVariable ["time", time];
+								_x setVariable ["time", 0];
 							};
 						};
 					};
@@ -215,7 +215,7 @@ _getOut=[];
 				if (!_delete) then {
 					if (fleeing _x) then {
 						_delete = true;
-						_x setVariable ["time", time];
+						_x setVariable ["time", 0];
 					};
 				};
 
