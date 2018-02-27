@@ -12,7 +12,7 @@ while{true}do{
 			_time = time;
 			_grp setVariable ["grp_created_time", _time];
 		};
-		
+
 		private["_currentWP","_waypoints","_createWP","_leaderPos"];
 		_currentWP = currentWaypoint _grp;
 		_waypoints = waypoints _grp;
@@ -65,7 +65,7 @@ while{true}do{
 					};
 					if!(_true)then{
 						if(_oldTime < time)then{
-							if(_oldPos distance _pos >= 1)then{
+							if(_oldPos distance _pos >= 10)then{
 								_cleanup = [getPos vehicle _leader,time+40,time+120];
 								_grp setVariable ["_cleanup",_cleanup];
 								_true = true;
