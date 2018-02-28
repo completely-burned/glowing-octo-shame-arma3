@@ -340,7 +340,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.108 Tanoa";
+		briefingName="glowing-octo-shame v0.0.0.109 Tanoa";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
