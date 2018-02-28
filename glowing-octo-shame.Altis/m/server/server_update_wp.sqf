@@ -106,7 +106,7 @@ while{true}do{
   								_x action ["Eject", _this];
   								_x leaveVehicle _this;
                   sleep 0.5;
-  							}forEach assignedCargo _this;
+  							}forEach assignedCargo _veh;
         			}forEach _vehicles;
               _this setVariable ["UNLOAD",nil];
             };
