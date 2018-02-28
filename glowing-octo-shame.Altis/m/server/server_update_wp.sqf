@@ -103,8 +103,8 @@ while{true}do{
         				private["_veh"];
         				_veh = _x;
                 {
-  								_x action ["Eject", _this];
-  								_x leaveVehicle _this;
+  								_x action ["Eject", _veh];
+  								_x leaveVehicle _veh;
                   sleep 0.5;
   							}forEach assignedCargo _veh;
         			}forEach _vehicles;
