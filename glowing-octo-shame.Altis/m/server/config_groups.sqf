@@ -440,8 +440,8 @@ _west=_west+[
 
 // laws of war
 _west=_west+[
-	[[[["B_GEN_Commander_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Van_02_transport_F"],[[0,2.5,],[0,-2.5],[2.5,0],[-2.5,0],[2.5,2.5],[-2.5,-2.5],[2.5,-2.5],[-2.5,2.5],[0,5],[5,0],[0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
-	[[[["B_GEN_Commander_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Van_02_vehicle_F"],[[0,2.5,],[0,-2.5],[2.5,0],[-2.5,0],[2.5,2.5],[-2.5,-2.5],[2.5,-2.5],[-2.5,2.5],[0,5],[5,0],[0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+	[[[["B_GEN_Commander_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Van_02_transport_F"],[[0,2.5],[0,-2.5],[2.5,0],[-2.5,0],[2.5,2.5],[-2.5,-2.5],[2.5,-2.5],[-2.5,2.5],[0,5],[5,0],[0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
+	[[[["B_GEN_Commander_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Van_02_vehicle_F"],[[0,2.5],[0,-2.5],[2.5,0],[-2.5,0],[2.5,2.5],[-2.5,-2.5],[2.5,-2.5],[-2.5,2.5],[0,5],[5,0],[0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 	[[[["B_UAV_06_F"],[],["PRIVATE"]]],0.5],
 	[[[["B_UAV_06_medical_F"],[],["PRIVATE"]]],0.5]
 ];
