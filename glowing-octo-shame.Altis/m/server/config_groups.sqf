@@ -248,6 +248,7 @@ if(true)then{
 		[[[["I_LT_01_cannon_F","I_LT_01_cannon_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","LIEUTENANT"]]],0.5],
 		[[[["I_LT_01_scout_F"],[[0,0,0]],["LIEUTENANT"]]],0.5],
 		[[[["I_LT_01_AT_F","I_LT_01_AT_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","LIEUTENANT"]]],0.5],
+		[[[["I_LT_01_AA_F","I_LT_01_AA_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","LIEUTENANT"]]],0.5],
 		// беспилотники
 		[[[["I_UAV_01_F"],[],["PRIVATE"]]],0.5],
 		// [[[["I_UGV_01_F"],[],["PRIVATE"]]],0.5],
