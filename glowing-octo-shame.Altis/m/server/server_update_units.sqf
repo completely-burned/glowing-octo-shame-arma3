@@ -50,7 +50,7 @@ _getOut=[];
 							};
 						};
 						if!(_enableAttack)then{
-							if([[_assignedVehicle], ["M1128_MGS_EP1", "Pandur2_ACR"]] call m_fnc_CheckIsKindOfArray)then{
+							if([[_assignedVehicle], ["M1128_MGS_EP1", "Pandur2_ACR","I_LT_01_scout_F"]] call m_fnc_CheckIsKindOfArray)then{
 								_enableAttack = true;
 							};
 						};
