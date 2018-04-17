@@ -94,15 +94,17 @@ _getOut=[];
 				};
 
 				if(_allowGetin && true)then{
-					if(([vehicle _x, 300, side _x] call m_fnc_CheckCombatNearUnits))then{
-						if(count _VehicleRole > 0)then{
-							if(_VehicleRole select 0 == "Cargo")then{
-								_allowGetin=false;
-							};
-							if(_VehicleRole select 0 == "Turret")then{
-								if(_assignedVehicle isKindOf "BMP3")then{
-									if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1,2])then{
-										_allowGetin=false;
+					if(_assignedVehicle isKindOf "LandVehicle")then{
+						if(([vehicle _x, 300, side _x] call m_fnc_CheckCombatNearUnits))then{
+							if(count _VehicleRole > 0)then{
+								if(_VehicleRole select 0 == "Cargo")then{
+									_allowGetin=false;
+								};
+								if(_VehicleRole select 0 == "Turret")then{
+									if(_assignedVehicle isKindOf "BMP3")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1,2])then{
+											_allowGetin=false;
+										};
 									};
 								};
 							};
@@ -111,25 +113,26 @@ _getOut=[];
 				};
 
 				if(_allowGetin)then{
-					if(_assignedVehicle isKindOf "Air")then{
-						if(count _VehicleRole > 0)then{
-							if(_VehicleRole select 0 == "Cargo")then{
-								if((_assignedVehicle distance vehicle _x)>25)then{
-									_allowGetin=false;
-								};
-							};
+					if(_assignedVehicle != vehicle _x)then{
+						if((_assignedVehicle distance vehicle _x)>100)then{
+							_allowGetin=false;
 						};
 					};
 				};
 
 				if(_allowGetin)then{
-					if!([_assignedVehicle, false] call draga_fnc_CheckTurretAlive)then{
-						_allowGetin=false;
-					};
+					if(_assignedVehicle isKindOf "LandVehicle")then{
+						if!([_assignedVehicle, false] call draga_fnc_CheckTurretAlive)then{
+							_allowGetin=false;
+						};
+					}
 				};
 
-				if!(_allowGetin)then{
-					if(getText(configFile >> "CfgVehicles" >> typeOf _assignedVehicle >> "simulation") == "airplane")then{
+				if(toLower getText(configFile >> "CfgVehicles" >> typeOf _assignedVehicle >> "simulation") == "airplane")then{
+					if(_x == vehicle _x)then{
+						_allowGetin=false;
+					};
+					if(_assignedVehicle == vehicle _x)then{
 						_allowGetin=true;
 					};
 				};
