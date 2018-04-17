@@ -259,6 +259,7 @@ if(true)then{
 		[[[["I_Plane_Fighter_03_CAS_F","I_Plane_Fighter_03_CAS_F"],[[0,20,0],[20,0,0]],["CAPTAIN","CAPTAIN"]]],0.5],
 		[[[["I_Heli_light_03_F","I_Heli_light_03_F"],[[0,20,0],[20,0,0]],["CAPTAIN","CAPTAIN"]]],0.5],
 		// артиллерия
+		[[[["I_Truck_02_MRL_F","I_Truck_02_MRL_F"],[[0,0,0],[10,-10,0]],["LIEUTENANT","LIEUTENANT"]]],0.5],
 		// поддержка
 		[[[["I_Truck_02_medical_F"],[],["PRIVATE"],[["I_medic_F"]]]],0.5],
 		[[[["I_Truck_02_box_F"],[],["PRIVATE"],[["I_engineer_F"]]]],0.5],
@@ -457,7 +458,6 @@ _west=_west+[
 
 // laws of war
 _west=_west+[
-	[[[["B_GEN_Commander_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Van_02_transport_F"],[[0,2.5],[0,-2.5],[2.5,0],[-2.5,0],[2.5,2.5],[-2.5,-2.5],[2.5,-2.5],[-2.5,2.5],[0,5],[5,0],[0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 	[[[["B_GEN_Commander_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Soldier_F","B_GEN_Van_02_vehicle_F"],[[0,2.5],[0,-2.5],[2.5,0],[-2.5,0],[2.5,2.5],[-2.5,-2.5],[2.5,-2.5],[-2.5,2.5],[0,5],[5,0],[0,0]],["LIEUTENANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]],0.5],
 	[[[["B_UAV_06_F"],[],["PRIVATE"]]],0.5],
 	[[[["B_UAV_06_medical_F"],[],["PRIVATE"]]],0.5]
