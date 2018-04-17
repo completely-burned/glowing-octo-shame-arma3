@@ -20,6 +20,10 @@ while{true}do{
 		_leaderPos = getPos vehicle _leader;
 
 		if(!isNil{_grp getVariable "deleteWaypoints"})then{
+			while {(count (waypoints _grp)) > 0} do
+			{
+				deleteWaypoint ((waypoints _grp) select 0);
+			};
 			{vehicle _x land "NONE";}forEach units _grp;
 			_grp setVariable ["deleteWaypoints",nil];
 		};
