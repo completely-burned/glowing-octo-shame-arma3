@@ -100,8 +100,50 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=1;
+						items=4;
 						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Wave";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuInventory";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item3
 						{
 							class data
 							{
@@ -172,7 +214,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=2;
+					value=3;
 				};
 			};
 		};
@@ -340,7 +382,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.121 Tanoa";
+		briefingName="glowing-octo-shame v0.0.0.122 Tanoa";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -1657,7 +1699,7 @@ class Mission
 			init="if(count nearestLocations [getPos this, [""CityCenter""], 250] == 0)then{createLocation [""CityCenter"", getPos this, 100, 100]};";
 			id=71;
 			type="LocationCity_F";
-			atlOffset=2.8920956;
+			atlOffset=3.3108082;
 		};
 		class Item61
 		{

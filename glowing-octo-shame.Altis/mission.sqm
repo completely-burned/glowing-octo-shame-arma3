@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=827;
+		nextID=828;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class LayerIndexProvider
 	{
@@ -82,7 +82,7 @@ class ScenarioData
 	class Header
 	{
 		gameType="Coop";
-		maxPlayers=20;
+		maxPlayers=2000;
 	};
 	wreckLimit=150;
 	wreckRemovalMaxTime=3600;
@@ -115,6 +115,25 @@ class CustomAttributes
 		};
 		class Attribute1
 		{
+			property="ReviveMedicSpeedMultiplier";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=3;
+				};
+			};
+		};
+		class Attribute2
+		{
 			property="ReviveRequiredTrait";
 			expression="false";
 			class Value
@@ -132,7 +151,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute2
+		class Attribute3
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -149,8 +168,50 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=1;
+						items=4;
 						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Wave";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuInventory";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item3
 						{
 							class data
 							{
@@ -168,7 +229,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute3
+		class Attribute4
 		{
 			property="ReviveMode";
 			expression="false";
@@ -187,7 +248,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=4;
+		nAttributes=5;
 	};
 	class Category1
 	{
@@ -218,7 +279,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.121 Altis";
+		briefingName="glowing-octo-shame v0.0.0.122 Altis";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;

@@ -134,14 +134,7 @@ CreateMarker ["MainTown", getPos player];
 
 // CivilianLocation = locationNull;
 if(isMultiplayer)then{
-	private["_locationNull"];
-	_locationNull = true;
-	while{_locationNull}do{
-		{
-			if(alive _x)then{civilianBasePos = position _x};
-			_locationNull = false;
-		}foreach playableunits
-	};
+	civilianBasePos = getArray (configfile >> "CfgWorlds" >> worldName >> "centerPosition");
 }else{
 	civilianBasePos = position player;
 };
