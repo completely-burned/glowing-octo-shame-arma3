@@ -108,12 +108,10 @@ while{true}do{
     								_x action ["Eject", _veh];
     								_x leaveVehicle _veh;
                     sleep 0.5;
-                    waitUntil{!alive _x or !alive _veh or assignedVehicle _x != _veh};
                   };
   							}forEach crew _veh;
         			}forEach _vehicles;
               _this setVariable ["UNLOAD",nil];
-              _this setVariable ["deleteWaypoints",true];
             };
           };
         };
