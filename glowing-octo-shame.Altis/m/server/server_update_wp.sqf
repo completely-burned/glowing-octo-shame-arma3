@@ -107,11 +107,17 @@ while{true}do{
                     _x addBackPack "B_parachute";
     								_x action ["Eject", _veh];
     								_x leaveVehicle _veh;
-                    sleep 0.5;
+                    waitUntil{!alive _x or !alive _veh or !(_x in _veh)};
+                    waitUntil{!alive _x or !alive _veh or assignedVehicle _x != _veh};
                   };
   							}forEach crew _veh;
+                _veh land "NONE";
         			}forEach _vehicles;
               _this setVariable ["UNLOAD",nil];
+              sleep 15;
+              {
+                _x land "NONE";
+              }forEach _vehicles;
             };
           };
         };
