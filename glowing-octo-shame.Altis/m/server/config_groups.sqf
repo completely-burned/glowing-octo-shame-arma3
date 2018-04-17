@@ -3,7 +3,7 @@ private ["_west","_east","_guer","_woodland","_deserted"];
 _west=[];_east=[];_guer=[];
 
 _woodland=false; _deserted=false;
-if(toLower worldname in ["altis"])then{_deserted=true};
+if(toLower worldname in ["altis","vr"])then{_deserted=true};
 if(toLower worldname in ["tanoa"])then{_woodland=true};
 
 // A3
