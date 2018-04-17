@@ -19,6 +19,10 @@ while{true}do{
 		_createWP = false;
 		_leaderPos = getPos vehicle _leader;
 
+		if(!isNil{_grp getVariable "deleteWaypoints"})then{
+			{vehicle _x land "NONE";}forEach units _grp;
+			_grp setVariable ["deleteWaypoints",nil];
+		};
 		if(isPlayer _leader)then{
 			while {(count (waypoints _grp)) > 0} do
 			{

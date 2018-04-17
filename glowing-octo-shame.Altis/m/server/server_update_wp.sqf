@@ -112,6 +112,7 @@ while{true}do{
   							}forEach crew _veh;
         			}forEach _vehicles;
               _this setVariable ["UNLOAD",nil];
+              _this setVariable ["deleteWaypoints",true];
             };
           };
         };
