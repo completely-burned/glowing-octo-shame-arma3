@@ -103,10 +103,13 @@ while{true}do{
         				private["_veh"];
         				_veh = _x;
                 {
-  								_x action ["Eject", _veh];
-  								_x leaveVehicle _veh;
-                  sleep 0.5;
-  							}forEach assignedCargo _veh;
+                  if(group _x != _this)then{
+                    _x addBackPack "B_parachute";
+    								_x action ["Eject", _veh];
+    								_x leaveVehicle _veh;
+                    sleep 0.5;
+                  };
+  							}forEach crew _veh;
         			}forEach _vehicles;
               _this setVariable ["UNLOAD",nil];
             };
