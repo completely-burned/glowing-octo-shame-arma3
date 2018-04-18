@@ -35,6 +35,21 @@ _getOut=[];
 										_allowGetin=false;
 									};
 								};
+								if(_assignedVehicle isKindOf "I_MRAP_03_F")then{
+									if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [0])then{
+										_allowGetin=false;
+									};
+								};
+								if(_assignedVehicle isKindOf "I_MRAP_03_gmg_F")then{
+									if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1])then{
+										_allowGetin=false;
+									};
+								};
+								if(_assignedVehicle isKindOf "I_MRAP_03_hmg_F")then{
+									if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1])then{
+										_allowGetin=false;
+									};
+								};
 							};
 						};
 					};
@@ -66,6 +81,21 @@ _getOut=[];
 								if(_VehicleRole select 0 == "Turret")then{
 									if(_assignedVehicle isKindOf "BMP3")then{
 										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1,2])then{
+											_allowGetin=false;
+										};
+									};
+									if(_assignedVehicle isKindOf "I_MRAP_03_F")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [0])then{
+											_allowGetin=false;
+										};
+									};
+									if(_assignedVehicle isKindOf "I_MRAP_03_gmg_F")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1])then{
+											_allowGetin=false;
+										};
+									};
+									if(_assignedVehicle isKindOf "I_MRAP_03_hmg_F")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1])then{
 											_allowGetin=false;
 										};
 									};
@@ -105,6 +135,21 @@ _getOut=[];
 								if(_VehicleRole select 0 == "Turret")then{
 									if(_assignedVehicle isKindOf "BMP3")then{
 										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1,2])then{
+											_allowGetin=false;
+										};
+									};
+									if(_assignedVehicle isKindOf "I_MRAP_03_F")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [0])then{
+											_allowGetin=false;
+										};
+									};
+									if(_assignedVehicle isKindOf "I_MRAP_03_gmg_F")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1])then{
+											_allowGetin=false;
+										};
+									};
+									if(_assignedVehicle isKindOf "I_MRAP_03_hmg_F")then{
+										if(([_VehicleRole, [1, 0]] call BIS_fnc_returnNestedElement) in [1])then{
 											_allowGetin=false;
 										};
 									};
