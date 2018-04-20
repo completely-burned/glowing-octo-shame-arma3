@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10448.418,77.406792,4932.2178};
-		dir[]={0.04353578,-0.17957629,-0.98278022};
-		up[]={0.0079471823,0.98374403,-0.17940035};
-		aside[]={-0.99902022,-4.6566129e-010,-0.04425519};
+		pos[]={10728.427,52.618561,14036.695};
+		dir[]={-1.7484555e-007,0,1};
+		up[]={0,1,0};
+		aside[]={1,-0,1.7484555e-007};
 	};
 };
 binarizationWanted=0;
@@ -382,7 +382,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.134 Tanoa";
+		briefingName="glowing-octo-shame v0.0.0.135 Tanoa";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
