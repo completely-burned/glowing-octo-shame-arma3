@@ -1,9 +1,40 @@
-m_friendlySide = [west];
-if(toLower worldname in ["zargabad", "takistan", "utes", "chernarus"])then{m_friendlySide = [east]};
-if(toLower worldname in ["shapur_baf", "mountains_acr"])then{m_friendlySide = [west]};
-if(toLower worldname in ["fdf_isle1_a"])then{m_friendlySide = [resistance]};
+m_friendlySide = [];
 
-private ["_i"];
+private ["_i","_ii"];
+for [{_i = 0}, {_i < count (missionConfigFile >> "MissionSQM" >> "Mission" >> "Entities")}, {_i = _i + 1}] do {
+	private["_grpCFG"];
+    _grpCFG = (missionConfigFile >> "MissionSQM" >> "Mission" >> "Entities") select _i;
+		if (isClass _grpCFG) then {
+			if (getText (_grpCFG >> "dataType") == "Group") then {
+				private["_sideCFG","_unitsCFG"];
+				_sideCFG = getText (_grpCFG >> "side");
+				_unitsCFG = _grpCFG >> "Entities";
+				for [{_ii = 0}, {_ii < count _unitsCFG}, {_ii = _ii + 1}] do {
+					private ["_unitCFG"];
+					_unitCFG = _unitsCFG select _ii;
+					if (isClass _unitCFG) then {
+						private ["_isPlayable"];
+						_isPlayable = false;
+						if (getNumber (_unitCFG >> "Attributes" >> "isPlayer") == 1) then {
+							_isPlayable = true;
+						};
+						if (getNumber (_unitCFG >> "Attributes" >> "isPlayable") == 1) then {
+							_isPlayable = true;
+						};
+						if (_isPlayable) then {
+							switch (_sideCFG) do {
+								case "East": {if !(east in m_friendlySide) then {m_friendlySide = m_friendlySide + [east]}};
+								case "West": {if !(west in m_friendlySide) then {m_friendlySide = m_friendlySide + [west]}};
+								case "Independent": {if !(resistance in m_friendlySide) then {m_friendlySide = m_friendlySide + [resistance]}};
+								case "Civilian": {if !(civilian in m_friendlySide) then {m_friendlySide = m_friendlySide + [civilian]}};
+								default {};
+							};
+						};
+					};
+				};
+			};
+		};
+};
 
 /// silvieManager ///
 silvieManagerBlacklist=[

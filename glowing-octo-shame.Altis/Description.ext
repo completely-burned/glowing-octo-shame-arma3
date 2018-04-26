@@ -1,3 +1,8 @@
+class MissionSQM
+{
+	#include "mission.sqm"
+};
+
 class Params {
 	class serverFPSmin {
 		title="(AI) server FPS";
