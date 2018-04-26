@@ -2,7 +2,7 @@ private["_grp","_units","_vehicles"];
 _grp = _this;
 _units = units _grp;
 _vehicles = [];
-{	
+{
 	private ["_veh"];
 	_veh = vehicle _x;
 	if(_veh != _x)then{
@@ -47,6 +47,7 @@ if(leader _grp distance (waypointPosition [_grp, 0]) > 50)then{
 						_true = false;
 						if("32Rnd_155mm_Mo_shells" in getArtilleryAmmo [_veh])then{_mag = "32Rnd_155mm_Mo_shells";_true = true;};
 						if("12Rnd_230mm_rockets" in getArtilleryAmmo [_veh])then{_mag = "12Rnd_230mm_rockets";_true = true;};
+						if("rhs_mag_HE_2a33" in getArtilleryAmmo [_veh])then{_mag = "rhs_mag_HE_2a33";_true = true;};
 						if(_true)then{
 							if(_pos inRangeOfArtillery [[_veh], _mag])then{
 								_veh commandArtilleryFire [_pos, _mag, 3];
