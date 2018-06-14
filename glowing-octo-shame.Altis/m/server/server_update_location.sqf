@@ -123,11 +123,11 @@ while{true}do{
 		private["_next"];
 		_next = false;
 		if(isMultiplayer)then{
-			if (((_east1 >=  50000 && east CountSide playableUnits > 0 && _eastEnemies * 4 < _east) || (_west1 >=  50000 && west CountSide playableUnits > 0 && _westEnemies * 4 < _west) || (_resistance1 >=  50000 && resistance CountSide playableUnits > 0 && _resistanceEnemies * 4 < _resistance))) then {
+			if (((_east1 >=  50000 && east CountSide playableUnits > 0 && _eastEnemies * 3 < _east) || (_west1 >=  50000 && west CountSide playableUnits > 0 && _westEnemies * 3 < _west) || (_resistance1 >=  50000 && resistance CountSide playableUnits > 0 && _resistanceEnemies * 3 < _resistance))) then {
 				_next = true;
 			};
 		}else{
-			if (((_east1 >=  50000 && playerSide == east  && _eastEnemies * 4 < _east) || (_west1 >=  50000 && playerSide == west && _westEnemies * 4 < _west) || (_resistance1 >=  50000 && playerSide == resistance && _resistanceEnemies * 4 < _resistance))) then {
+			if (((_east1 >=  50000 && playerSide == east  && _eastEnemies * 3 < _east) || (_west1 >=  50000 && playerSide == west && _westEnemies * 3 < _west) || (_resistance1 >=  50000 && playerSide == resistance && _resistanceEnemies * 3 < _resistance))) then {
 				_next = true;
 			};
 		};
