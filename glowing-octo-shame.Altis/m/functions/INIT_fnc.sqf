@@ -6,6 +6,7 @@ if (isServer) then {
 	if (!IsMultiplayer) then {
 		m_fnc_playerRespawnSP = compile (preprocessFileLineNumbers (_path + "m_fnc_playerRespawnSP.sqf"));
 		m_fnc_playerRespawn = compile (preprocessFileLineNumbers (_path + "m_fnc_playerRespawn.sqf"));
+		draga_fnc_StaticWeapon = compile (preprocessFileLineNumbers (_path + "draga_fnc_StaticWeapon.sqf"));
 	};
 };
 if (!IsDedicated) then {
