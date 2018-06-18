@@ -68,7 +68,7 @@ if(_patrol)then{
 		default {};
 	};
 };
-		
+
 private["_grp1"];
 private["_types"];
 private["_SafePosParams"];
@@ -94,7 +94,7 @@ private["_groups"];
 _groups = ([_pos_resp, _side, _grp1 select 0] call m_fnc_spawnGroup);
 
 private ["_units","_vehicles","_crew","_cargo"];
-_units = []; _vehicles=[]; _crew = []; _cargo=[]; 
+_units = []; _vehicles=[]; _crew = []; _cargo=[];
 {
 	private ["_grp"];
 	_grp = _x;
@@ -112,6 +112,10 @@ _units = []; _vehicles=[]; _crew = []; _cargo=[];
 			};
 		}else{
 			_cargo set [count _cargo, _x];
+		};
+		while {(count (waypoints _grp)) > 0} do
+		{
+			deleteWaypoint ((waypoints _grp) select 0);
 		};
 	}forEach units _grp;
 
