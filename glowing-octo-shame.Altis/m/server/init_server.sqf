@@ -14,7 +14,7 @@ m_skill = (missionNamespace getVariable "m_skill") / 100;
 enableSaving [false,false]; // отключение возможность сохраняться
 // enableRadio false;
 // 0 fadeRadio 0;
-// enableSentences false;
+enableSentences false;
 
 if(debug)then{
 	diag_log format ["diag_log: worldname == %1", worldname];
@@ -89,13 +89,13 @@ if(!ACE_Avail)then{
 	(group_logic) createUnit ["MartaManager",[1000,10,0],[],0,"none"];
 };
 // командование
-// if (isNil "BIS_HC_mainscope") then	{		
+// if (isNil "BIS_HC_mainscope") then	{
 // _logic = group_logic createUnit ["HighCommand",[1000,10,0],[],0,"NONE"];
 // _logic SetVariable ["addAllGroups",false];
 // BIS_HC_mainscope = _logic;
 // publicVariable "BIS_HC_mainscope";
 // };
-// эффекты 
+// эффекты
 // if ( LIB_ahAvail ) then {
 	// (group_logic) createUnit ["WeatherPostprocessManager",[1000,10,0],[],0,"none"];
 	// (group_logic) createUnit ["WeatherParticlesManager",[1000,10,0],[],0,"none"];
@@ -132,7 +132,7 @@ waitUntil{!isNil "m_fnc_init"};
 
 ///--- создание и удаление объектов, базы
 // if(worldName == "Chernarus")then{
-	// // [] call compile preprocessFileLineNumbers "\ca\missions\campaign\missions\C3_Manhattan.Chernarus\manhattansetup.sqf";		
+	// // [] call compile preprocessFileLineNumbers "\ca\missions\campaign\missions\C3_Manhattan.Chernarus\manhattansetup.sqf";
 	// {
 		// _x = [4727.5889,8.9828243,2543.7881] nearestObject _x;
 		// _x setDamage 1;
@@ -147,7 +147,7 @@ if(isMultiplayer)then{
 };
 
 
-// 
+//
 [] call compile preprocessFileLineNumbers "m\server\init_objects.sqf";
 
 // списки групп
@@ -160,5 +160,3 @@ if(isMultiplayer)then{
 //--- патрули, боты создание
 [] spawn compile preprocessFileLineNumbers "m\server\updateFPS.sqf";
 [] spawn compile preprocessFileLineNumbers "m\server\updateReinforcement.sqf";
-
-

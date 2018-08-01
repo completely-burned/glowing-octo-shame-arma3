@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11621.63,48.294365,11980.077};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={10819.649,19.871956,10519.288};
+		dir[]={-0.59053838,-0.446412,0.67229515};
+		up[]={-0.29460809,0.8948276,0.33539495};
+		aside[]={0.75131261,-1.4901161e-008,0.65994662};
 	};
 };
 binarizationWanted=0;
@@ -279,7 +279,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="glowing-octo-shame v0.0.0.144 Altis RHS(RF)";
+		briefingName="glowing-octo-shame v0.0.0.145 Altis RHS(RF)";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
@@ -1134,6 +1134,7 @@ class Mission
 					};
 					id=829;
 					type="rhs_msv_officer";
+					atlOffset=7.6293945e-006;
 				};
 				class Item1
 				{
@@ -1152,6 +1153,7 @@ class Mission
 					};
 					id=830;
 					type="rhs_msv_officer_armored";
+					atlOffset=5.7220459e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1212,6 +1214,7 @@ class Mission
 					};
 					id=831;
 					type="rhs_msv_officer_armored";
+					atlOffset=5.7220459e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1290,6 +1293,7 @@ class Mission
 					};
 					id=832;
 					type="rhs_msv_rifleman";
+					atlOffset=5.7220459e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1338,6 +1342,7 @@ class Mission
 			{
 			};
 			id=828;
+			atlOffset=7.6293945e-006;
 		};
 	};
 };
