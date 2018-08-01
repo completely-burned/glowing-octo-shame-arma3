@@ -14,7 +14,7 @@ if [ ! -d ${DIR}/out ]; then
         mkdir ${DIR}/out
 fi
 
-V="0"
+V=$(grep briefingName ${DIR}/glowing-octo-shame.Altis/mission.sqm | sed -e 's/.*glowing-octo-shame v\(.*\) .*/\1/' -e 's/\./\-/gi')
 
 
 # Altis
