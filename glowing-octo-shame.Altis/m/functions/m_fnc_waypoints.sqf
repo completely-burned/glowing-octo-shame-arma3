@@ -36,7 +36,7 @@ if(!isNil "_leader")then{
 	_typeWP = waypointType _wp;
 
 
-	if(count _waypoints <= _currentWP + 1)then{
+	if(count _waypoints <= _currentWP)then{
 		private["_WaypointCombatMode"];
 		_WaypointCombatMode = "RED";
 
