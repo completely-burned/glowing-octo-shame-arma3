@@ -24,33 +24,13 @@ makepbo -M ${DIR}/tmp/glowing-octo-shame.Altis ${DIR}/out/glowing-octo-shame-${V
 
 
 # Tanoa
-if [ ! -d ${DIR}/tmp/glowing-octo-shame.Tanoa ]; then
-        mkdir ${DIR}/tmp/glowing-octo-shame.Tanoa
-fi
-
-cd ${DIR}/glowing-octo-shame.Altis
-
-for FILE in $(find ./ -maxdepth 1 ! -path "./mission.sqm" ! -path "./"); do
-	ln -s ${DIR}/glowing-octo-shame.Altis/${FILE} ${DIR}/tmp/glowing-octo-shame.Tanoa/${FILE}
-done
-
-ln -s ${DIR}/glowing-octo-shame.Tanoa/mission.sqm ${DIR}/tmp/glowing-octo-shame.Tanoa/mission.sqm
+ln -s ./../glowing-octo-shame.Tanoa ${DIR}/tmp/glowing-octo-shame.Tanoa
 
 makepbo -M ${DIR}/tmp/glowing-octo-shame.Tanoa ${DIR}/out/glowing-octo-shame-${V}.Tanoa.pbo
 
 
 # Altis RHS
-if [ ! -d ${DIR}/tmp/glowing-octo-shame-rhs.Altis ]; then
-        mkdir ${DIR}/tmp/glowing-octo-shame-rhs.Altis
-fi
-
-cd ${DIR}/glowing-octo-shame.Altis
-
-for FILE in $(find ./ -maxdepth 1 ! -path "./mission.sqm" ! -path "./"); do
-        ln -s ${DIR}/glowing-octo-shame.Altis/${FILE} ${DIR}/tmp/glowing-octo-shame-rhs.Altis/${FILE}
-done
-
-ln -s ${DIR}/glowing-octo-shame-rhs.Altis/mission.sqm ${DIR}/tmp/glowing-octo-shame-rhs.Altis/mission.sqm
+ln -s ./../glowing-octo-shame-rhs.Altis ${DIR}/tmp/glowing-octo-shame-rhs.Altis
 
 makepbo -M ${DIR}/tmp/glowing-octo-shame-rhs.Altis ${DIR}/out/glowing-octo-shame-rhs-${V}.Altis.pbo
 
