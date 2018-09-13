@@ -20,17 +20,17 @@ V=$(grep briefingName ${DIR}/glowing-octo-shame.Altis/mission.sqm | sed -e 's/.*
 # Altis
 ln -s ./../glowing-octo-shame.Altis ${DIR}/tmp/glowing-octo-shame.Altis
 
-makepbo -M ${DIR}/tmp/glowing-octo-shame.Altis ${DIR}/out/glowing-octo-shame-${V}.Altis.pbo
+makepbo -NM ${DIR}/tmp/glowing-octo-shame.Altis ${DIR}/out/glowing-octo-shame-${V}.Altis.pbo
 
 
 # Tanoa
 ln -s ./../glowing-octo-shame.Tanoa ${DIR}/tmp/glowing-octo-shame.Tanoa
 
-makepbo -M ${DIR}/tmp/glowing-octo-shame.Tanoa ${DIR}/out/glowing-octo-shame-${V}.Tanoa.pbo
+makepbo -NM ${DIR}/tmp/glowing-octo-shame.Tanoa ${DIR}/out/glowing-octo-shame-${V}.Tanoa.pbo
 
 
 # Altis RHS
 ln -s ./../glowing-octo-shame-rhs.Altis ${DIR}/tmp/glowing-octo-shame-rhs.Altis
 
-makepbo -M ${DIR}/tmp/glowing-octo-shame-rhs.Altis ${DIR}/out/glowing-octo-shame-rhs-${V}.Altis.pbo
+makepbo -NM ${DIR}/tmp/glowing-octo-shame-rhs.Altis ${DIR}/out/glowing-octo-shame-rhs-${V}.Altis.pbo
 
