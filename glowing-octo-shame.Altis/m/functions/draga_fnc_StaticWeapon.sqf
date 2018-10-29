@@ -25,14 +25,15 @@ if ([[_this], ["StaticWeapon"]] call m_fnc_CheckIsKindOfArray) then {
 							} forEach _crew;
 							_this setVariable ["_crew", nil];
 						};
-						private["_list","_grp"];
+						private["_list","_grp","_grp2"];
 						_list = _this nearEntities ["StaticWeapon", 300];
 						scopeName "scopeName_list";
 						private["_obj"];
 						{
 							_obj = _x;
-						    if (({isPlayer _x} count units group _obj) == 0 && (_side == side _obj)) then {
-						        _grp = group _obj;
+							_grp2 = group _obj;
+						    if (({isPlayer _x} count units _grp2) == 0 && (_side == side _obj) && !isNull _grp2) then {
+						        _grp = _grp2;
 										breakTo "scopeName_list";
 						    };
 						} forEach _list;
