@@ -5,6 +5,5 @@ _damage = _this select 2;
 _source = _this select 3;
 _projectile = _this select 4;
 
-if(isPlayer _source && isPlayer _unit)exitWith{_damage min (0.8 - 0.01)};
+if(isPlayer _source && isPlayer _unit && _source != _unit && !(vehicle _source == vehicle _unit && _projectile in ["HelicopterExploSmall","HelicopterExploBig"]))exitWith{_damage min (0.8 - 0.01)};
 _damage
-
