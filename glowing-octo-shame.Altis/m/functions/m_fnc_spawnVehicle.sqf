@@ -21,12 +21,13 @@ _sim = toLower getText(configFile >> "CfgVehicles" >> _type >> "simulation");
 
 if (_sim in ["airplane", "helicopter", "helicopterrtd", "helicopterx", "airplanex"]) then {
 	if ((count _pos) == 2) then {
-		_pos = _pos + [200];	
+		_pos = _pos + [200];
 	};
-	
+
 	_veh = createVehicle [_type, _pos, [], 0, "FLY"];
 
 }else{
+	_pos resize 2;
 	_veh = createVehicle [_type, _pos, [], 0, "FORM"];
 	_veh setVelocity [0,0,-1];
 };

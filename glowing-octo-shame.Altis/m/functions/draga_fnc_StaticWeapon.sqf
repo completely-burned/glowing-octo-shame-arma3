@@ -1,9 +1,49 @@
 if ([[_this], ["StaticWeapon"]] call m_fnc_CheckIsKindOfArray) then {
 	if (alive _this) then {
-    if ({alive _x} count crew _this == 0) then {
-      if ({alive _x} count (nearestObjects [_this, listMHQ + HQ + ["Base_WarfareBBarracks","Base_WarfareBLightFactory"], 150]) > 0) then {
-        _this setVehicleAmmo 1;
-    	};
-  	};
+		private["_side"];
+		_side = getNumber(LIB_cfgVeh >> typeOf _this >> "side") call m_fnc_getSide;
+		if (_side in m_friendlySide) then {
+			if ({alive _x} count (nearestObjects [_this, listMHQ + HQ + ["Base_WarfareBBarracks","Base_WarfareBLightFactory"], 150]) > 0) then {
+				if ([getPos _this, 10] call m_fnc_CheckPlayersDistance)then{
+					private["_crew"];
+					_crew = _this getVariable "_crew";
+					if (!isNil {_crew}) then {
+						{
+					    moveOut _x;
+							deleteVehicle _x;
+						} forEach _crew;
+						_this setVariable ["_crew", nil];
+					};
+				}else{
+					if (!alive gunner _this) then {
+						private["_crew"];
+						_crew = _this getVariable "_crew";
+						if (!isNil {_crew}) then {
+							{
+						    moveOut _x;
+								deleteVehicle _x;
+							} forEach _crew;
+							_this setVariable ["_crew", nil];
+						};
+						private["_list","_grp"];
+						_list = _this nearEntities ["StaticWeapon", 300];
+						scopeName "scopeName_list";
+						private["_obj"];
+						{
+							_obj = _x;
+						    if (({isPlayer _x} count units group _obj) == 0 && (_side == side _obj)) then {
+						        _grp = group _obj;
+										breakTo "scopeName_list";
+						    };
+						} forEach _list;
+						if (isNil {_grp}) then {
+						   _grp = createGroup _side;
+						};
+						_crew = [_this, _grp] call m_fnc_spawnCrew;
+						_this setVariable ["_crew", _crew];
+			    };
+				};
+			};
+		};
 	};
 };

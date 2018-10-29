@@ -1,5 +1,5 @@
 ﻿private["_types"];
-_types = _this select 0;	
+_types = _this select 0;
 private ["_minDist", "_maxDist", "_objDist", "_waterMode", "_maxGradient", "_shoreMode", "_defaultPos", "_blacklist","_safePositionRadius","_preferRoads"];
 _minDist = 1000;
 _objDist = 2;
@@ -8,13 +8,13 @@ _maxGradient = -1;
 _shoreMode = 0;
 _defaultPos=[];
 _blacklist=PosBlacklist;
-_maxDist = _minDist*2;
+_maxDist = 2000;
 _safePositionRadius =  (getNumber(configfile>> "cfgWorlds">> worldname >> "safePositionRadius"));
 // if (_safePositionRadius < 4000) then {_safePositionRadius = 4000};
 
 if ([_types, ["LandVehicle"]] call m_fnc_CheckIsKindOfArray) then{
 	_minDist = 1500;
-	_maxDist = _minDist*2;
+	_maxDist = 3000;
 	_waterMode = 0;
 	// if("canfloat" in _types)then{_waterMode = 1};
 	_objDist = 15;
@@ -22,7 +22,7 @@ if ([_types, ["LandVehicle"]] call m_fnc_CheckIsKindOfArray) then{
 
 if ([_types, ["Air"]] call m_fnc_CheckIsKindOfArray) then{
 	_minDist = 3500;
-	_maxDist = _minDist*2;
+	_maxDist = 7000;
 	_waterMode = -1;
 	_objDist = -1;
 	_blacklist=[];
@@ -50,21 +50,28 @@ _preferRoads=false;
 
 if ([_types, ["Ship"]] call m_fnc_CheckIsKindOfArray) then{
 	_minDist = 1500;
-	_maxDist = _minDist*2;
+	_maxDist = 3000;
 	_waterMode = 2;
 	_objDist = 15;
 	_blacklist=[];
 }else{
 	if ({getText(LIB_cfgVeh >> _x >> "vehicleClass") == "MenDiver"}count _types > 0) then{
 		_minDist = 1000;
-		_maxDist = _minDist*2;
+		_maxDist = 2000;
 		_waterMode = -1;
 	};
 };
 
 if ({getNumber(LIB_cfgVeh >> _x >> "artilleryScanner") == 1}count _types > 0) then{
 	_minDist = 2000;
-	_maxDist = _minDist*3;
+	_maxDist = 6000;
+};
+
+if ([_types, ["StaticWeapon "]] call m_fnc_CheckIsKindOfArray) then{
+	_minDist = 1500;
+	_maxDist = sizeLocation;
+	_waterMode = 0;
+	_objDist = 30;
 };
 
 [_minDist,_maxDist, _objDist, _waterMode, _maxGradient, _shoreMode, _blacklist, _defaultPos, _preferRoads];
