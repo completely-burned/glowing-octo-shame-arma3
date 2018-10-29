@@ -15,7 +15,7 @@ _playerCoefficient = missionNamespace getVariable "playerCoefficient";
 _timeFriendlyReinforcements = (missionNamespace getVariable "timeFriendlyReinforcements") * 60;
 
 private["_all_groups","_friendlyGroups","_friendlyPatrols","_enemyGroups","_enemyPatrols","_enemySide"];
-	
+
 _enemySide = [west,east,resistance] - m_friendlySide;
 
 while{true}do{
@@ -50,7 +50,7 @@ while{true}do{
 		};
 
 		if(_visible)then{
-			if(!isPlayer leader _grp)then{
+			if({isPlayer _x} count units _grp == 0)then{
 				if (!isNil {_grp GetVariable "patrol"}) then {
 					if (_side in m_friendlySide) then {
 						_friendlyPatrols = _friendlyPatrols + 1;
@@ -73,7 +73,7 @@ while{true}do{
 	}forEach allGroups;
 
 	_all_groups=(_friendlyPatrols+_enemyPatrols+_friendlyGroups+_enemyGroups);
-	
+
 	if (isMultiplayer)then{
 		{
 			if(isPlayer _x)then{
