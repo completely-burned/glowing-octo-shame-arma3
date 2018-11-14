@@ -91,7 +91,9 @@ _deleteList=[];
 
 		_veh call m_fnc_SalvageTruck;
 
-		_veh call draga_fnc_StaticWeapon;
+		if (getText(LIB_cfgVeh >> _type >> "vehicleClass") != "Autonomous" && getNumber(LIB_cfgVeh >> _type >> "isUAV") != 1) then {
+		    _veh call draga_fnc_StaticWeapon;
+		};
 
 	}else{
 		if !(_delete) then{
