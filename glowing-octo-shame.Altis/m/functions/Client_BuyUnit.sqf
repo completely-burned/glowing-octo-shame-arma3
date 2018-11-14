@@ -240,15 +240,42 @@ if (true) then {
 		Private["_Objects"];
 		_Objects = (nearestObjects [vehicle player, ["Base_WarfareBBarracks"]+_HQ+Airport+["WarfareBDepot","WarfareBCamp"], 100]);
 		if ( (count _Objects > 0) or _respawn_pos) then {
-			Private["_veh"];
-			_veh = (createVehicle [_type, [0,0], [], 20, "FORM"]);
-			_veh setDir getDir vehicle player;
-			Private["_pos"];
-			_pos = position vehicle player;
-			_pos resize 2;
-			_veh setPos ([_pos,0, 1 max sizeOf _type] call draga_fn_getSafePos);
-			_veh call _fnc_1;
-			hint format["%1: %2", localize "str_support_done", _type];
+			if(getNumber (LIB_cfgVeh >> _type >> "isUav") == 1 or getText(LIB_cfgVeh >> _type >> "vehicleClass") == "Autonomous")then{
+				Private["_side","_grp","_list","_grp2","_obj"];
+				_side = playerSide;
+				_pos = position vehicle player;;
+				_pos resize 2;
+				_list = _pos nearEntities ["StaticWeapon", 300];
+				scopeName "scopeName_list";
+				{
+					_obj = _x;
+					_grp2 = group _obj;
+						if (({isPlayer _x} count units _grp2) == 0 && (_side == side _obj) && !isNull _grp2) then {
+								_grp = _grp2;
+								breakTo "scopeName_list";
+						};
+				} forEach _list;
+				if (isNil {_grp}) then {
+					 _grp = createGroup _side;
+				};
+				Private["_veh"];
+				_veh = [_pos, random 360, _type, _grp] call m_fnc_spawnVehicle;
+				_veh = _veh select 0;
+				_veh setDir getDir vehicle player;
+				_veh setPos ([_pos,0, 1 max sizeOf _type] call draga_fn_getSafePos);
+				_veh call _fnc_1;
+				hint format["%1: %2", localize "str_support_done", _type];
+			}else{
+				Private["_veh"];
+				_veh = (createVehicle [_type, [0,0], [], 20, "FORM"]);
+				_veh setDir getDir vehicle player;
+				Private["_pos"];
+				_pos = position vehicle player;
+				_pos resize 2;
+				_veh setPos ([_pos,0, 1 max sizeOf _type] call draga_fn_getSafePos);
+				_veh call _fnc_1;
+				hint format["%1: %2", localize "str_support_done", _type];
+			};
 		};
 	};
 	// [_type] call m_fnc_setTimeAvailableVehiclesBuyMenu;
