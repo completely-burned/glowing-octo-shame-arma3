@@ -38,6 +38,7 @@ for [{_i = 0}, {_i < count (missionConfigFile >> "MissionSQM" >> "Mission" >> "E
 
 /// silvieManager ///
 silvieManagerBlacklist=[
+	"UGV_01_base_F",
 	"Land_sloup_vn_dratZ",
 	"Land_sloup_vn",
 	"Land_Farm_WTower",
@@ -130,7 +131,7 @@ for [{_i = 0}, {_i < count (configfile >> "cfgVehicles")}, {_i = _i + 1}] do {
 			private ["_scope","_side"];
 			_scope = getnumber (_actual >> "scope");
 			_side = getnumber (_actual >> "side");
-			if (_class iskindof "LandVehicle" && _scope == 2 && _side == 3) then {
+			if (_class iskindof "LandVehicle" && _scope == 2 && _side == 3 && !([[_class], silvieManagerBlacklist] call m_fnc_CheckIsKindOfArray)) then {
 				silvieManagerVehicles = silvieManagerVehicles + [_class];
 			};
 		};
