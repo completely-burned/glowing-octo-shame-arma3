@@ -94,7 +94,9 @@ if(!_woodland && _deserted)then{
 		[[[["B_static_AT_F"],[],["PRIVATE"]]],0.1],
 		[[[["B_HMG_01_F"],[],["PRIVATE"]]],0.1],
 		[[[["B_GMG_01_A_F"],[],["PRIVATE"]]],0.1],
-		[[[["B_GMG_01_high_F"],[],["PRIVATE"]]],0.1]
+		[[[["B_GMG_01_high_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_Mortar_01_F"],[],["PRIVATE"]]],0.05],
+		[[[["B_G_Mortar_01_F"],[],["PRIVATE"]]],0.05]
 	];
 };
 if(true)then{
@@ -196,7 +198,9 @@ if(!_woodland && _deserted)then{
 		[[[["O_static_AT_F"],[],["PRIVATE"]]],0.1],
 		[[[["O_HMG_01_F"],[],["PRIVATE"]]],0.1],
 		[[[["O_GMG_01_A_F"],[],["PRIVATE"]]],0.1],
-		[[[["O_GMG_01_high_F"],[],["PRIVATE"]]],0.1]
+		[[[["O_GMG_01_high_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_Mortar_01_F"],[],["PRIVATE"]]],0.05],
+		[[[["O_G_Mortar_01_F"],[],["PRIVATE"]]],0.05]
 	];
 };
 if(true)then{
@@ -281,7 +285,9 @@ if(true)then{
 		[[[["I_static_AT_F"],[],["PRIVATE"]]],0.1],
 		[[[["I_HMG_01_F"],[],["PRIVATE"]]],0.1],
 		[[[["I_GMG_01_A_F"],[],["PRIVATE"]]],0.1],
-		[[[["I_GMG_01_high_F"],[],["PRIVATE"]]],0.1]
+		[[[["I_GMG_01_high_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_Mortar_01_F"],[],["PRIVATE"]]],0.05],
+		[[[["I_G_Mortar_01_F"],[],["PRIVATE"]]],0.05]
 	];
 };
 
@@ -365,7 +371,8 @@ if(_woodland && !_deserted)then{
 		[[[["B_T_GMG_01_F"],[],["PRIVATE"]]],0.1],
 		[[[["B_T_Static_AA_F"],[],["PRIVATE"]]],0.1],
 		[[[["B_T_Static_AT_F"],[],["PRIVATE"]]],0.1],
-		[[[["B_T_HMG_01_F"],[],["PRIVATE"]]],0.1]
+		[[[["B_T_HMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_T_Mortar_01_F"],[],["PRIVATE"]]],0.05]
 	];
 };
 
@@ -505,6 +512,14 @@ _east=_east+[
 // jets
 _guer=_guer+[
 	[[[["I_Plane_Fighter_04_F","I_Plane_Fighter_04_F"],[[0,20,0],[20,0,0]],["CAPTAIN","CAPTAIN"]]],0.5]
+];
+
+// дистанционный целеуказатель
+_west=_west+[
+	[[[["B_Static_Designator_01_F"],[],["PRIVATE"]]],0.5]
+];
+_east=_east+[
+	[[[["O_Static_Designator_02_F"],[],["PRIVATE"]]],0.5]
 ];
 
 // RHS
