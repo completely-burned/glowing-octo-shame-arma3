@@ -18,6 +18,9 @@ _fnc_1={
 	player reveal _this;
 	_this call m_fnc_vehInit;
 	[[_this], true] call m_fnc_reweapon;
+	{
+	    _x disableAI "AUTOCOMBAT";
+	} forEach crew _this;
 };
 
 private ["_respawn_pos"];
