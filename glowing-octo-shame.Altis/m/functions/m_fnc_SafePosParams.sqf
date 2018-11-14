@@ -62,12 +62,12 @@ if ([_types, ["Ship"]] call m_fnc_CheckIsKindOfArray) then{
 	};
 };
 
-if ({getNumber(LIB_cfgVeh >> _x >> "artilleryScanner") == 1}count _types > 0) then{
+if ({getNumber(LIB_cfgVeh >> _x >> "artilleryScanner") == 1 or getNumber(LIB_cfgVeh >> _x >> "vehicleClass") == "Autonomous"}count _types > 0) then{
 	_minDist = 2000;
 	_maxDist = 6000;
 };
 
-if ([_types, ["StaticWeapon"]] call m_fnc_CheckIsKindOfArray && {getNumber(LIB_cfgVeh >> _x >> "artilleryScanner") == 1}count _types == 0) then{
+if ([_types, ["StaticWeapon"]] call m_fnc_CheckIsKindOfArray && {getNumber(LIB_cfgVeh >> _x >> "artilleryScanner") == 1 or getNumber(LIB_cfgVeh >> _x >> "vehicleClass") == "Autonomous"}count _types == 0) then{
 	_minDist = 1500;
 	_maxDist = sizeLocation;
 	_waterMode = 0;
