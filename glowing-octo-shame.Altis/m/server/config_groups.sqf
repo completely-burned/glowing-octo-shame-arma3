@@ -85,7 +85,16 @@ if(!_woodland && _deserted)then{
 		[[[["B_Truck_01_fuel_F"],[],["PRIVATE"]]],0.5],
 		[[[["B_Truck_01_ammo_F"],[],["PRIVATE"]]],0.5],
 		[[[["B_G_Offroad_01_repair_F"],[],["PRIVATE"],[["B_G_engineer_F"]]]],0.5],
-		[[[["B_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5]
+		[[[["B_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5],
+		// турели
+		[[[["B_GMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_HMG_01_A_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_HMG_01_high_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_static_AA_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_static_AT_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_HMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_GMG_01_A_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_GMG_01_high_F"],[],["PRIVATE"]]],0.1]
 	];
 };
 if(true)then{
@@ -178,7 +187,16 @@ if(!_woodland && _deserted)then{
 		// [[[["O_Truck_02_Ammo_F"],[],["PRIVATE"]]],0.5],
 		[[[["O_Truck_02_fuel_F"],[],["PRIVATE"]]],0.5],
 		[[[["O_G_Offroad_01_repair_F"],[],["PRIVATE"],[["O_G_engineer_F"]]]],0.5],
-		[[[["O_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5]
+		[[[["O_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5],
+		// турели
+		[[[["O_GMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_HMG_01_A_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_HMG_01_high_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_static_AA_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_static_AT_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_HMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_GMG_01_A_F"],[],["PRIVATE"]]],0.1],
+		[[[["O_GMG_01_high_F"],[],["PRIVATE"]]],0.1]
 	];
 };
 if(true)then{
@@ -254,7 +272,16 @@ if(true)then{
 		[[[["I_Truck_02_fuel_F"],[],["PRIVATE"]]],0.5],
 		[[[["I_Truck_02_ammo_F"],[],["PRIVATE"]]],0.5],
 		[[[["I_G_Offroad_01_repair_F"],[],["PRIVATE"],[["I_engineer_F"]]]],0.5],
-		[[[["I_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5]
+		[[[["I_G_Van_01_fuel_F"],[],["PRIVATE"]]],0.5],
+		// турели
+		[[[["I_GMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_HMG_01_A_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_HMG_01_high_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_static_AA_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_static_AT_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_HMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_GMG_01_A_F"],[],["PRIVATE"]]],0.1],
+		[[[["I_GMG_01_high_F"],[],["PRIVATE"]]],0.1]
 	];
 };
 
@@ -333,7 +360,12 @@ if(_woodland && !_deserted)then{
 		[[
 			[["B_CTRG_Heli_Transport_01_tropic_F"],[[0,0,0]],["LIEUTENANT"]],
 			[["B_CTRG_Soldier_TL_tna_F","B_CTRG_Soldier_M_tna_F","B_CTRG_Soldier_Medic_tna_F","B_CTRG_Soldier_tna_F","B_CTRG_Soldier_LAT_tna_F","B_CTRG_Soldier_JTAC_tna_F","B_CTRG_Soldier_Exp_tna_F","B_CTRG_Soldier_AR_tna_F"],[[0,0,0],[5,-5,0],[-5,-5,0],[10,-10,0],[-10,-10,0],[15,-15,0],[-15,-15,0],[20,-20,0]],["SERGEANT","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE","PRIVATE"]]
-		],0.5]
+		],0.5],
+		// турели
+		[[[["B_T_GMG_01_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_T_Static_AA_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_T_Static_AT_F"],[],["PRIVATE"]]],0.1],
+		[[[["B_T_HMG_01_F"],[],["PRIVATE"]]],0.1]
 	];
 };
 
