@@ -95,6 +95,9 @@ _deleteList=[];
 		    _veh call draga_fnc_StaticWeapon;
 		};
 
+		_veh call draga_fnc_uav;
+
+
 	}else{
 		if !(_delete) then{
 			if ( _time > ( time + 180 ) )then {
