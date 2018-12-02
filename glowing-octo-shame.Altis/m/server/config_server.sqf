@@ -147,3 +147,26 @@ availableMagazines = [] call m_fnc_availableMagazines;
 publicVariable "availableMagazines";
 availableBackpacks = [] call m_fnc_availableBackpacks;
 publicVariable "availableBackpacks";
+
+_woodland=false; _deserted=false;
+if(toLower worldname in ["altis","vr"])then{_deserted=true};
+if(toLower worldname in ["tanoa"])then{_woodland=true};
+airTransportsWest=[];airTransportsEast=[];airTransportsGuer=[];
+airTransportsWest=airTransportsWest+["B_Heli_Transport_03_F","B_Heli_Transport_03_unarmed_F","B_Heli_Light_01_F","B_Heli_Transport_01_F"];
+airTransportsEast=airTransportsEast+["O_Heli_Transport_04_bench_F","O_Heli_Transport_04_covered_F","O_Heli_Light_02_dynamicLoadout_F","O_Heli_Light_02_unarmed_F"];
+airTransportsGuer=airTransportsGuer+["I_Heli_Transport_02_F","I_Heli_light_03_dynamicLoadout_F","I_Heli_light_03_unarmed_F","I_C_Heli_Light_01_civil_F"];
+if(!_deserted)then{
+	airTransportsWest=airTransportsWest+["B_CTRG_Heli_Transport_01_tropic_F"];
+};
+if(!_woodland)then{
+	airTransportsWest=airTransportsWest+["B_CTRG_Heli_Transport_01_sand_F"];
+};
+ {
+	if(configName(configfile >> "cfgVehicles" >> _x) == "")then{airTransportsWest=airTransportsWest-[_x]};
+}forEach airTransportsWest;
+{
+	if(configName(configfile >> "cfgVehicles" >> _x) == "")then{airTransportsEast=airTransportsEast-[_x]};
+}forEach airTransportsEast;
+{
+	if(configName(configfile >> "cfgVehicles" >> _x) == "")then{airTransportsGuer=airTransportsGuer-[_x]};
+}forEach airTransportsGuer;

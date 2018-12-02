@@ -90,4 +90,11 @@ class CfgCommunicationMenu
         text = "watch";
         submenu = "#WATCH";
    };
+	 class heli_transport
+	 {
+			 text = "heli_transport";
+			 submenu = "";
+			 expression = "if (vehicle player == player) then {player setVariable ['transportPos',_pos,true]}else{vehicle player setVariable ['transportPos', _pos,true]}";
+			 enable = "CursorOnGround";
+	 };
 };
