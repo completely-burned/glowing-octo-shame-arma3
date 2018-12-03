@@ -1,4 +1,4 @@
-waitUntil{!isNil "bis_fnc_init"};	
+waitUntil{!isNil "bis_fnc_init"};
 waitUntil{!isNil "m_fnc_init"};
 
 availableVehiclesBuyMenu = [[],[],[]];
@@ -56,7 +56,6 @@ if ( isMultiplayer ) then {
 	player addEventHandler ["killed", {"respawn" spawn m_fnc_RespawnWeaponsAdd}];
 	player addEventHandler ["killed", {_this spawn m_fnc_resetActions}];
 	player addEventHandler ["killed", {_this select 0 call {_this setVariable ["BIS_lifestate","ALIVE",true]}}];
-	player call m_fnc_vehInit;
 }else{
 	onTeamSwitch {
 		SetGroupIconsVisible [true,false];
@@ -67,7 +66,7 @@ if ( isMultiplayer ) then {
 	};
 	{deleteVehicle _x}forEach SwitchableUnits-(units group player);
 	EnableTeamSwitch true;
-	
+
 	waitUntil{!isNil "m_fnc_init"};
 	PlayerType = [typeOf leader player, rank leader player];
 	leader player addEventHandler ["killed", {_this call m_fnc_playerRespawnSP}];
@@ -79,7 +78,7 @@ if(debug)then{
 	[] call compile preprocessFileLineNumbers  "m\Client\radio\init.sqf";
 
 	// военные обозначения, показ всех, чтобы видеть как и где создаются боты
-	waitUntil{!isNil "bis_fnc_init"};	
+	waitUntil{!isNil "bis_fnc_init"};
 	private ["_martaFactions"];
 	_martaFactions=[];
 	{ _martaFactions = (_martaFactions + [_x,1]) } foreach ([] call BIS_fnc_getFactions);
