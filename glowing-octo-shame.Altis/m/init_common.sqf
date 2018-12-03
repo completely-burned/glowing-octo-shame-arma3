@@ -18,7 +18,7 @@ if (configName(configFile >> "CfgMods" >> "acex_ru") != "") then {acex_ru_Avail 
 acex_usnavy_Avail = false;
 if (configName(configFile >> "CfgMods" >> "acex_usnavy") != "") then {acex_usnavy_Avail = true};
 
-///--- функции 
+///--- функции
 [] call compile preprocessFileLineNumbers "m\functions\INIT_fnc.sqf";
 
 listSalvageTruck = ["WarfareSalvageTruck_RU","WarfareSalvageTruck_USMC","WarfareSalvageTruck_CDF","WarfareSalvageTruck_Gue","WarfareSalvageTruck_INS",
@@ -61,5 +61,8 @@ HQ = ["Land_BagBunker_Large_F","Cargo_HQ_base_F","Cargo_Tower_base_F"];
 UAVterminal = listMHQ + HQ + ["Base_WarfareBUAVterminal","HMMWV_Terminal_EP1"];
 
 draga_objectsTeleport = listMHQ + HQ + ["WarfareBBaseStructure","BASE_WarfareBFieldhHospital"];
+
+draga_objectsReammo = listMHQ + HQ + ["Base_WarfareBBarracks","Base_WarfareBLightFactory"];
+draga_distanceReammo = 150;
 
 [] execVM ("m\draga_update_vehicle_init.sqf");
