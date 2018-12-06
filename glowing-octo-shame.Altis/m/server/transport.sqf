@@ -105,7 +105,7 @@ private["_players"];
 					_wp = _grp addWaypoint [_pos, 0];
 					_wp setWaypointType "LOAD";
 					_wp setWaypointCombatMode "GREEN";
-					_wp setWaypointStatements ["true", "vehicle this land 'GET IN'; "];
+					_wp setWaypointStatements ["true", "vehicle this land 'GET IN'"];
 					_grp setVariable ["draga_GET_IN_pos", _pos];
 					_veh setVariable ["draga_GET_OUT_pos", nil];
 					_veh setVariable ["transportPos", nil];
