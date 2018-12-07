@@ -199,7 +199,15 @@ if(!isNil "_leader")then{
 			_WaypointType = "UNLOAD";
 		};
 		if(_landing && _Ship && count _vehicles > 0)then{
-			if(getNumber(LIB_cfgWea >> currentWeapon (_vehicles select 0) >> "enableAttack")==0)then{
+			if((
+				(
+					getNumber(LIB_cfgWea >> currentWeapon (_vehicles select 0) >> "enableAttack")==0)
+					&&
+					!([_vehicles, ["RHIB"]] call m_fnc_CheckIsKindOfArray)
+				)
+				or
+				([_vehicles, ["RubberBoat"]] call m_fnc_CheckIsKindOfArray)
+			)then{
 				_WaypointType = "GETOUT";
 			}else{
 				_WaypointType = "UNLOAD";
@@ -235,6 +243,6 @@ if(!isNil "_leader")then{
 		_wp setWaypointCombatMode _WaypointCombatMode;
 		_wp setWaypointBehaviour _WaypointBehaviour;
 		_wp setWaypointCompletionRadius _WaypointCompletionRadius;
-		_wp setWaypointStatements ["true", "if(!isNil {this})then{group this setVariable ['_grp_wp_completed',true];[this,true] call m_fnc_waypoints}"];
+		_wp setWaypointStatements ["true", "if(!isNil {this})then{group this setVariable ['_grp_wp_completed',true]}"];
 	};
 };
