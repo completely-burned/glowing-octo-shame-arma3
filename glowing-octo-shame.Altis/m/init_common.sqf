@@ -57,6 +57,7 @@ listMHQ=[];
 	];
 
 HQ = ["Land_BagBunker_Large_F","Cargo_HQ_base_F","Cargo_Tower_base_F"];
+Warfare_HQ = [];
 
 UAVterminal = listMHQ + HQ + ["Base_WarfareBUAVterminal","HMMWV_Terminal_EP1"];
 
@@ -64,5 +65,11 @@ draga_objectsTeleport = listMHQ + HQ + ["WarfareBBaseStructure","BASE_WarfareBFi
 
 draga_objectsReammo = listMHQ + HQ + ["Base_WarfareBBarracks","Base_WarfareBLightFactory"];
 draga_distanceReammo = 150;
+draga_objectsCoinBase = Warfare_HQ+HQ;
+draga_distanceCoinBase = 150;
+draga_objectsCoinMHQ = listMHQ;
+draga_distanceCoinMHQ = 15;
+draga_BuyDistance = draga_distanceCoinBase;
+respawnSafeDistance = 10;
 
 [] execVM ("m\draga_update_vehicle_init.sqf");
