@@ -1,1 +1,0 @@
-../glowing-octo-shame.Altis/manhattansetupAmbient.sqf
